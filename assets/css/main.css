@@ -5,7 +5,7 @@
     padding: 0;
 }
 body.index{
-    background-color: #d6b59a;
+    background-image: linear-gradient(to bottom, #e3a4c6, #e99db3, #ea989e, #e6958a, #dd9576);
     display: grid;
     width: 100%;
     min-height: 100vh;
@@ -21,7 +21,7 @@ body.index{
     /*background-image: url("../image/bg_pumpkin.jpg");*/
 }
 body.historia{
-    background-color: #d6b59a;
+    background-image: linear-gradient(to bottom, #e3a4c6, #e99db3, #ea989e, #e6958a, #dd9576);
     display: grid;
     width: 100%;
     min-height: 100vh;
@@ -36,7 +36,7 @@ body.historia{
     /*background-image: url("../image/bg_pumpkin.jpg");*/
 }
 body.products{
-    background-color: #d6b59a;
+    background-image: linear-gradient(to bottom, #e3a4c6, #e99db3, #ea989e, #e6958a, #dd9576);
     display: grid;
     width: 100%;
     min-height: 100vh;
@@ -55,7 +55,7 @@ body.products{
     /*background-image: url("../image/bg_pumpkin.jpg");*/
 }
 body.comprar{
-    background-color: #d6b59a;
+    background-image: linear-gradient(to bottom, #e3a4c6, #e99db3, #ea989e, #e6958a, #dd9576);
     display: grid;
     width: 100%;
     min-height: 100vh;
@@ -71,7 +71,7 @@ body.comprar{
     /*background-image: url("../image/bg_pumpkin.jpg");*/
 }
 body.contacto{
-    background-color: #d6b59a;
+    background-image: linear-gradient(to bottom, #e3a4c6, #e99db3, #ea989e, #e6958a, #dd9576);
     display: grid;
     width: 100%;
     min-height: 100vh;
@@ -113,7 +113,8 @@ p, ol, label, .productos__text, .how2buy__text, .FAQ, ul, .prod_info, figcaption
     font-family: 'League Spartan', sans-serif;
     font-size: 1.7em;
     /*color: #d6b59a;*/
-    color: rgb(223, 138, 107);
+    /*color: rgb(223, 138, 107);*/
+    color: rgb(240, 176, 152);
     text-align: center;
     padding: 10px;
     text-decoration: none;
@@ -123,6 +124,7 @@ a.menu__link:hover{
 }
 .logo{
     flex-basis: 30%;
+    transition: all 2s ease-in-out;
 }
 
 #logo-img{
@@ -142,6 +144,35 @@ h1{
     font-family: 'Fredoka', sans-serif;
     font-size: 50px;
     color: #9F6272;
+    animation-name: bigger;
+    animation-duration: 5s;
+    animation-iteration-count: 2;
+    transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.sticky{
+    position: absolute;
+    top: 11vh;
+}
+.sticky2{
+    position: absolute;
+    bottom: 1px;
+    right: 5px;
+}
+.sticky>img{
+    width: 30px;
+    animation-name: glowing;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.sticky2>img{
+    width: 30px;
+    animation-name: glowing;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .intro__text{
     text-align: center;
@@ -256,6 +287,7 @@ h2{
     width: 230px;
     height: 320px;
     padding: 5px;
+    transition: all 2s ease-in-out;
 }
 .prod_info{
     width: 20%;
@@ -339,6 +371,21 @@ footer{
     width: 50%;
 }
 
+/*ANIMATIONS*/
+h1:hover {
+    font-size: 60px;
+}
+.logo:hover{
+    flex-basis: 40%;
+}
+@keyframes glowing{
+    0%{opacity:0;}
+    100%{opacity: 1;}
+}
+.productos__muestra_img,.productos__image:hover{
+    width: 310px;
+}
+/*RESPONSIVE*/
 @media screen and (min-width: 600px) and (max-width:1150px){
     .inspiration__img{
         width: 30%;
@@ -411,6 +458,7 @@ footer{
         width: 290px;
         height: 360px;
         margin: 15px;
+        transition: all 2s ease-in-out;
     }
     .productos__image{
         width: 250px;
