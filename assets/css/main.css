@@ -1,0 +1,440 @@
+/*Global*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body.index{
+    background-color: #d6b59a;
+    display: grid;
+    width: 100%;
+    min-height: 100vh;
+    grid-gap: 10px;
+    grid-template-columns: (2, 1fr);
+    grid-template-rows: 10vh 10fr 25fr 25fr 13vh;
+    grid-template-areas: 
+    "header header"
+    "intro intro"
+    "inspo_img inspo_text"
+    "prod_muestra prod_muestra" 
+    "footer footer";
+    /*background-image: url("../image/bg_pumpkin.jpg");*/
+}
+body.historia{
+    background-color: #d6b59a;
+    display: grid;
+    width: 100%;
+    min-height: 100vh;
+    grid-gap: 10px;
+    grid-template-columns: (4, 1fr);
+    grid-template-rows: 10vh 15fr 62fr 13vh;
+    grid-template-areas: 
+    "header header header header"
+    "h_text h_text h_text h_text"
+    "h_img h_img h_img h_img" 
+    "footer footer footer footer";
+    /*background-image: url("../image/bg_pumpkin.jpg");*/
+}
+body.products{
+    background-color: #d6b59a;
+    display: grid;
+    width: 100%;
+    min-height: 100vh;
+    grid-gap: 10px;
+    grid-template-columns: (4, 1fr);
+    grid-template-rows: 10vh 2fr 15fr 15fr 15fr 15fr 15fr 13vh;
+    grid-template-areas: 
+    "header header header header"
+    "title title title title"
+    "productos1 productos1 productos1 productos1"
+    "productos2 productos2 productos2 productos2"
+    "productos3 productos3 productos3 productos3"
+    "productos4 productos4 productos4 productos4"
+    "productos5 productos5 productos5 productos5" 
+    "footer footer footer footer";
+    /*background-image: url("../image/bg_pumpkin.jpg");*/
+}
+body.comprar{
+    background-color: #d6b59a;
+    display: grid;
+    width: 100%;
+    min-height: 100vh;
+    grid-gap: 10px;
+    grid-template-columns: (4, 1fr);
+    grid-template-rows: 10vh 20fr 17fr 40fr 13vh;
+    grid-template-areas: 
+    "header header header header"
+    "intro intro intro intro"
+    "how2buy how2buy how2buy how2buy"
+    "FAQ FAQ FAQ FAQ"
+    "footer footer footer footer";
+    /*background-image: url("../image/bg_pumpkin.jpg");*/
+}
+body.contacto{
+    background-color: #d6b59a;
+    display: grid;
+    width: 100%;
+    min-height: 100vh;
+    grid-gap: 10px;
+    grid-template-columns: (4, 1fr);
+    grid-template-rows: 10vh 77fr 13vh;
+    grid-template-areas: 
+    "header header header header"
+    "contact contact contact contact"
+    "footer footer footer footer";
+    /*background-image: url("../image/bg_pumpkin.jpg");*/
+}
+p, ol, label, .productos__text, .how2buy__text, .FAQ, ul, .prod_info, figcaption{
+    font-family: 'League Spartan', sans-serif;
+    font-size: 24px; 
+    color: #743A25;
+    text-align: justify;
+    padding: 10px;
+    /*background-color: #713945;*/
+}
+
+/*HEADER*/
+
+.container-menu{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #9F6272;
+    grid-area: header;
+}
+.menu{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.menu__link{
+    font-family: 'League Spartan', sans-serif;
+    font-size: 1.7em;
+    /*color: #d6b59a;*/
+    color: rgb(223, 138, 107);
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+}
+a.menu__link:hover{
+    color: #482F5F;
+}
+.logo{
+    flex-basis: 30%;
+}
+
+#logo-img{
+    margin-top: 4px;
+    margin-bottom: 2px;
+    min-width: 70px;
+    width: 30%;
+}
+
+/*MAIN PAGE*/
+.container__intro{
+    grid-area: intro;
+    margin: 10px;
+}
+h1{
+    text-align: center;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 50px;
+    color: #9F6272;
+}
+.intro__text{
+    text-align: center;
+}
+h2{
+    text-align: left;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 30px; 
+    color: #9F6272;
+    padding: 10px;
+}
+/*.inspiration{
+    grid-area: inspo;
+    display: flex;
+    flex-direction: row;
+}*/
+.inspiration__text{
+    grid-area: inspo_text;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+}
+
+.inspiration__image{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: inspo_img;
+}
+.inspiration__img{
+    width: 77%;
+    min-width: 300px;
+}
+
+.productos__muestra{
+    grid-area: prod_muestra;
+    display: flex;
+    flex-flow: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.productos__muestra_img{
+    width: 230px;
+    height: 320px;
+    padding: 5px;
+}
+/*HISTORIA*/
+.historia__text{
+    grid-area: h_text;
+}
+.historia__img{
+    grid-area: h_img;
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    justify-content: space-around;
+}
+.historia__img_sl{
+    width: 350px;
+    height: 400px;
+    margin: 15px;
+}
+/*PRODUCTOS*/
+.title{
+    grid-area: title;
+}
+.productos1{
+    grid-area: productos1;
+    display: flex;
+    flex-flow: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.productos2{
+    grid-area: productos2;
+    display: flex;
+    flex-flow: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.productos3{
+    grid-area: productos3;
+    display: flex;
+    flex-flow: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.productos4{
+    grid-area: productos4;
+    display: flex;
+    flex-flow: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.productos5{
+    grid-area: productos5;
+    display: flex;
+    flex-flow: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.productos__image{
+    width: 230px;
+    height: 320px;
+    padding: 5px;
+}
+.prod_info{
+    width: 20%;
+}
+
+/*COMPRAR*/
+.intro_buy{
+    grid-area: intro;
+}
+.how2buy{
+    grid-area: how2buy;
+    display: flex;
+    flex-flow: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.how2buy_FAQ{
+    grid-area: FAQ;
+}
+.how2buy__step>img{
+    width: 50px;
+    height: 50px;
+}
+.how2buy__step{
+    margin: 2px;
+}
+
+/*CONTACTO*/
+.form__input__name{
+    margin-left: 19px;
+}
+.form__input__mail{
+    margin-left: 16px;
+}
+.form__input__bigtext{
+    margin-left: 67px;
+}
+.form__boton__submit{
+    margin: 13px 30px 13px;
+    padding: 7px;
+}
+.form__boton__borrar{
+    margin: 13px;
+    padding: 7px;
+}
+.contact{
+    grid-area: contact;
+}
+
+/*FOOTER*/
+footer{
+    background-color: #9F6272;
+    grid-area: footer;
+}
+.container_footer{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+}
+.footer__copyright__text, .footer__redes__text{
+    width: 90%;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 24px; 
+    color: rgb(240, 176, 152);
+    text-align: justify;
+}
+.footer__copyright{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    width: 50%;
+}
+
+.footer__redes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    width: 50%;
+}
+
+@media screen and (min-width: 600px) and (max-width:1150px){
+    .inspiration__img{
+        width: 30%;
+    }
+    p, ol, label, .productos__text, .how2buy__text, .FAQ{
+        font-size: 30px; 
+    }
+    h2{
+        font-size: 45px;
+    }
+    body.historia{
+        grid-template-rows: 10vh 17fr 60fr 13vh;
+    }
+    ul, .prod_info{
+        font-size: 18px;
+        padding: 0;
+        margin:10px;
+    }
+    .productos__image{
+        width: 250px;
+        height: 320px;
+        margin: 5px;
+    }
+    .how2buy{
+        flex-direction: column;
+    }
+    .how2buy__step>img{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 599px){
+    body.index{
+        grid-gap: 4px;
+        min-height: 100vh;
+        grid-template-columns: (1, 1fr);
+        grid-template-rows: 10vh 10fr 8fr 9fr 50fr 13vh;
+        grid-template-areas: 
+    "header"
+    "intro"
+    "inspo_text"
+    "inspo_img"
+    "prod_muestra" 
+    "footer";
+    }
+    p, ol, label, .productos__text, .how2buy__text, .FAQ{
+        font-size: 36px; 
+    }
+    ul, .prod_info{
+        font-size: 18px;
+        padding: 0;
+    }
+    h2{
+        font-size: 45px;
+    }
+    .smaller_text{
+        font-size: 30px;
+    }
+    .inspiration{
+        flex-direction: column;
+        grid-area: inspo;
+    }
+    .inspiration__text{
+        order: -1;
+    }
+    .menu__link{
+        font-size: 1em;
+    }
+    .productos__muestra_img{
+        width: 290px;
+        height: 360px;
+        margin: 15px;
+    }
+    .productos__image{
+        width: 250px;
+        height: 320px;
+        margin: 5px;
+    }
+    .inspiration__img{
+        width: 77%;
+    }
+    .historia__img_sl{
+        width: 300px;
+        height: 450px;
+        margin: 15px;
+    }
+    .footer__copyright__text, .footer__redes__text{
+        font-size: 15px;
+    }
+    .how2buy{
+        flex-direction: column;
+    }
+    .how2buy__step>img{
+        display: none;
+    }
+    .form__text{
+        font-size: 15px;
+    }
+}

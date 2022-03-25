@@ -1,0 +1,33 @@
+/*Global*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 15vh 70fr 15vh;
+    grid-template-areas: 
+    "header header header"
+    "intro intro intro" 
+    "footer footer footer";
+}
+/*HEADER*/
+header{
+    background-color: #9F6272;
+    grid-area: header;
+}
+/*MAIN PAGE*/
+.intro{
+    grid-area: intro;
+    background-color: #743A25;
+}
+
+
+/*FOOTER*/
+footer{
+    background-color: #9F6272;
+    grid-area: footer;
+}
