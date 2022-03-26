@@ -4,44 +4,83 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SpookieCookie - NuestraHistoria</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500&family=League+Spartan&display=swap" rel="stylesheet">
-    <link href="../css/main.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="../css/main.css" rel="stylesheet">
 </head>
-<body class="historia">
-    <!---Inicio del header-->
-
-        <nav class="container-menu">
-            <picture class="logo"><img id="logo-img" src="../image/logo.jpeg"></picture>
-                <a class="menu__link" href="../../index.html">Inicio</a>
-                <a class="menu__link" href="./nuestrahistoria.html">Nuestra Historia</a>
-                <a class="menu__link" href="./productos.html">Productos</a>
-                <a class="menu__link" href="./comprar.html">¿Cómo comprar?</a>
-                <a class="menu__link" href="./contacto.html">Contacto</a>
+<body style="background-image: linear-gradient(to bottom, #e3a4c6, #e99db3, #ea989e, #e6958a, #dd9576);">
+    <header>
+        <nav class="navbar navbar-light navbar-expand-sm">
+            <!--<div class="container-fluid">-->
+                <a class="navbar-brand" href="./index.html">
+                    <img src="../image/logo3.jpg" class="logo d-inline-block align-top" alt="Logo SpookieCookie">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="../views/nuestrahistoria.html">Nuestra Historia</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="../views/productos.html">Productos</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="../views/comprar.html">¿Cómo comprar?</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="../views/contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            <!--</div>-->
         </nav>
-    <!---Fin del header-->
-    <section class="historia__text">
-        <h1>Nuestra Historia</h1>
-        <p class="smaller_text">
+    </header>
+    <!--END of HEADER-->
+
+    <section class="container intro"> 
+        <h1>Nuestra Historia</h1> 
+        <p class="text">
             Detrás de este proyecto estamos personitas como tú que tuvieron un sueño y lo quieren hacer realidad. La marca busca apoyar el amor propio y la autoaceptación. Al estar en esta página leyendo, ya estás formando parte de nuestra historia. Esperamos puedas encontrar algún producto dentro de nuestro catálogo que te haga sonreír . xoxo
         </p>
     </section>
-        <div class="historia__img">
-        <img class="historia__img_sl" src="../image/selflove.jpg">
-        <img class="historia__img_sl" src="../image/selflove3.jpg">
-        <img class="historia__img_sl" src="../image/selflove2.jpg">
+
+    
+    <div class=" container">
+        <div class="row">
+            <picture class="col-lg-4 col-md-6 col-xs-12"><img class="img-fluid" src="../image/selflove.jpg"></picture>
+            <picture class="col-lg-4 col-md-6 col-xs-12"><img class="img-fluid" src="../image/selflove3.jpg"></picture>
+            <picture class="col-lg-4 col-md-12 col-xs-12"><img class="img-fluid" src="../image/selflove2.jpg"></picture>
         </div>
-    <!---Inicio Footer-->
-    <footer class="container_footer">
-        <div class="footer__copyright">
-            <p class="footer__copyright__text">Todos los derechos reservados</p>
+    </div>
+
+    <br>
+    <footer class="bg-light text-center text-white">
+        <div class="p-4 pb-0" style="background-color: #9F6272;">
+            <section>
+                <a class="btn btn-floating m-1 " href="https://www.facebook.com" role="button">
+                    <img class="img-thumbnail petit" src="../image/fb.jpg">
+                </a>
+                <a class="btn btn-floating m-1" href="https://www.instagram.com" role="button">
+                    <img class="img-thumbnail petit" src="../image/ig.jpg">
+                </a>
+            </section>
         </div>
-        <div class="footer__redes">
-            <p class="footer__redes__text">Redes Sociales</p>
+        <div class="text-center p-3" style="background-color: #9F6272;">
+            © 2022 Copyright
+            <a class="text-white" href="#"></a>
         </div>
     </footer>
-    <!---.Fin Footer-->
+    <!--Bootstrap Scripts-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
