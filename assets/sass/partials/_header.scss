@@ -3,5 +3,10 @@ header{
     background-color: #9F6272;
 }
 .logo{
-    width:30%;
+    width: 45%;
+}
+@media screen and (max-width:539px){
+    .navbar-brand{
+        width: 300px;
+    }
 }
