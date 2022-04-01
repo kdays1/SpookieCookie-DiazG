@@ -1,0 +1,14 @@
+.inspo__img{
+    width: 50%;
+    min-width: 300px;
+}
+.prod__muestra_img{
+    width: 230px;
+    height: 320px;
+    padding: 5px;
+}
+@media screen and (max-width:779px){
+    .inspo_text{
+        order: -1;
+    }
+}

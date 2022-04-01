@@ -1,0 +1,14 @@
+/*IMPORTS*/
+
+/*MISCELANEOUS*/
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@500&family=League+Spartan&display=swap");
+@import './misc/normalize';
+@import './misc/mixins';
+@import './misc/animations';
+
+/*PARTIALS*/
+@import './partials/header';
+@import './partials/footer';
+
+/*VIEWS*/
+@import './views/home';

@@ -1,0 +1,14 @@
+.linksnav:hover{
+    color: #482F5F;
+}
+h1:hover {
+    font-size: 60px;
+}
+.prod__muestra_img:hover{
+    width: 310px;
+}
+@media screen and (max-width:779px){
+    .inspo_text{
+        order: -1;
+    }
+}

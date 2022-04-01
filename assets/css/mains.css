@@ -1,0 +1,65 @@
+/*IMPORTS*/
+/*MISCELANEOUS*/
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@500&family=League+Spartan&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+h1 {
+  text-align: center;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 50px;
+  color: #9F6272;
+  animation-name: bigger;
+  animation-duration: 5s;
+  animation-iteration-count: 2;
+  transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+
+.text {
+  font-family: 'League Spartan', sans-serif;
+  color: #743A25;
+  text-align: justify;
+  padding: 10px;
+  font-size: 1.5rem; }
+
+.linksnav:hover {
+  color: #482F5F; }
+
+h1:hover {
+  font-size: 60px; }
+
+.prod__muestra_img:hover {
+  width: 310px; }
+
+@media screen and (max-width: 779px) {
+  .inspo_text {
+    order: -1; } }
+
+/*PARTIALS*/
+header {
+  grid-area: header;
+  background-color: #9F6272; }
+
+.logo {
+  width: 30%; }
+
+.footer {
+  background-color: #9F6272;
+  grid-area: footer; }
+  .footer__thumbnail {
+    width: 46px; }
+
+/*VIEWS*/
+.inspo__img {
+  width: 50%;
+  min-width: 300px; }
+
+.prod__muestra_img {
+  width: 230px;
+  height: 320px;
+  padding: 5px; }
+
+@media screen and (max-width: 779px) {
+  .inspo_text {
+    order: -1; } }
