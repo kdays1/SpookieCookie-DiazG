@@ -8,45 +8,106 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500&family=League+Spartan&display=swap" rel="stylesheet">
-    <link href="../css/main.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="../css/mains.css" rel="stylesheet" type="text/css">
 </head>
-<body class="contacto">
-    <!---Inicio del header-->
-        <nav class="container-menu">
-            <picture class="logo"><img id="logo-img" src="../image/logo.jpeg"></picture>
-                <a class="menu__link" href="../../index.html">Inicio</a>
-                <a class="menu__link" href="./nuestrahistoria.html">Nuestra Historia</a>
-                <a class="menu__link" href="./productos.html">Productos</a>
-                <a class="menu__link" href="./comprar.html">¿Cómo comprar?</a>
-                <a class="menu__link" href="./contacto.html">Contacto</a>
+<body style="background-image: linear-gradient(to bottom, #e3a4c6, #e99db3, #ea989e, #e6958a, #dd9576);">
+    <header>
+        <nav class="navbar navbar-light navbar-expand-md">
+            <!--<div class="container-fluid">-->
+                <a class="navbar-brand" href="../../index.html">
+                    <img src="../image/logo3.jpg" class="logo d-inline-block align-top" alt="Logo SpookieCookie">
+                </a>
+                <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="../views/nuestrahistoria.html">Nuestra Historia</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="../views/productos.html">Productos</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="../views/comprar.html">¿Cómo comprar?</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="../views/contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            <!--</div>-->
         </nav>
-    <!---Fin del header-->
-    <section class="contact">
+    </header>
+    <!--END HEADER-->
+    <section class="container">
         <h1>Contacto</h1>
-        <p class="form__text">Cualquier comentario o duda que tengas y no cuentes con redes sociales, puedes enviarnos un correo. Anota tus datos en el siguiente formulario y te responderemos lo más pronto posible.</p>
+        <p class="text">Cualquier comentario o duda que tengas y no cuentes con redes sociales, puedes enviarnos un correo. Anota tus datos en el siguiente formulario y te responderemos lo más pronto posible.</p>
         <form action="" method="POST" enctype="">
-            <label class="form__text" for="Nombre Completo">Ingresa tu nombre completo:</label>
-            <input class="form__input__name" type="text" name="Nombre Completo" id=""><br>
-            <label class="form__text" for="Correo Electrónico">Ingresa tu correo electrónico:</label>
-            <input class="form__input__mail" type="email" name="Correo Electrónico" id=""><br>
-            <label class="form__text" for="Número de Teléfono">Ingresa tu número de teléfono:</label>
-            <input class="form__input__tel" type="tel" name="Número de Teléfono" id=""><br>
-            <label class="form__text" for="Dudas y/o Comentarios">Dudas y/o comentarios:</label>
-            <input class="form__input__bigtext" type="text" name="Dudas y/o Comentarios" id=""><br>
-            <br>
-            <input class="form__boton__submit" type="submit">
-            <input class="form__boton__borrar"type="reset" value="Reset">
+            <div class="form-group row">
+                <label for="inputName" class="col-sm-2 col-form-label">Nombre Completo</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputName" placeholder="Ingresa tu Nombre Completo">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="inputEmail" placeholder="Ingresa tu Email">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputPhone" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                    <input type="tel" class="form-control" id="inputPhone" placeholder="Ingresa tu teléfono">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputComm" class="col-sm-6 col-md-6 col-lg-2 col-form-label">Dudas/Comentarios</label>
+                <div class="col-sm-10">
+                    <input type="tel" class="form-control" id="inputComm" placeholder="Dudas y/o Comentarios" style="height:120px; width:200px;">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </div>
+                <div class="col">
+                    <button type="reset" class="btn btn-primary">Reset</button>
+                </div>
+            </div>
         </form>
     </section>
-    <!---Inicio Footer-->
-    <footer class="container_footer">
-        <div class="footer__copyright">
-            <p class="footer__copyright__text">Todos los derechos reservados</p>
+    <br>
+    <br>
+    <!--START FOOTER-->
+    <footer class="bg-light text-center text-white">
+        <div class="p-4 pb-0" style="background-color: #9F6272;">
+            <section>
+                <a class="btn btn-floating m-1 " href="https://www.facebook.com" role="button">
+                    <img class="img-thumbnail footer__thumbnail" src="../image/fb.jpg">
+                </a>
+                <a class="btn btn-floating m-1" href="https://www.instagram.com" role="button">
+                    <img class="img-thumbnail footer__thumbnail" src="../image/ig.jpg">
+                </a>
+            </section>
         </div>
-        <div class="footer__redes">
-            <p class="footer__redes__text">Redes Sociales</p>
+        <div class="text-center p-3" style="background-color: #9F6272;">
+            © 2022 Copyright
+            <a class="text-white" href="#"></a>
         </div>
     </footer>
-    <!---.Fin Footer-->
+    <!--END FOOTER-->
+
+    <!--Bootstrap Scripts-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
 </body>
 </html>

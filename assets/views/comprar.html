@@ -8,39 +8,66 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500&family=League+Spartan&display=swap" rel="stylesheet">
-    <link href="../css/main.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="../css/mains.css" rel="stylesheet" type="text/css">
 </head>
-<body class="comprar">
-    <!---Inicio del header-->
-        <nav class="container-menu">
-            <picture class="logo"><img id="logo-img" src="../image/logo.jpeg"></picture>
-                <a class="menu__link" href="../../index.html">Inicio</a>
-                <a class="menu__link" href="./nuestrahistoria.html">Nuestra Historia</a>
-                <a class="menu__link" href="./productos.html">Productos</a>
-                <a class="menu__link" href="./comprar.html">¿Cómo comprar?</a>
-                <a class="menu__link" href="./contacto.html">Contacto</a>
+<body style="background-image: linear-gradient(to bottom, #e3a4c6, #e99db3, #ea989e, #e6958a, #dd9576);">
+    <!--START HEADER-->
+    <header>
+        <nav class="navbar navbar-light navbar-expand-md">
+            <!--<div class="container-fluid">-->
+                <a class="navbar-brand" href="../../index.html">
+                    <img src="../image/logo3.jpg" class="logo d-inline-block align-top" alt="Logo SpookieCookie">
+                </a>
+                <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="../views/nuestrahistoria.html">Nuestra Historia</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="../views/productos.html">Productos</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="../views/comprar.html">¿Cómo comprar?</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="../views/contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            <!--</div>-->
         </nav>
-    <!---Fin del header-->
-    <section class="intro_buy">
+    </header>
+    <!--END HEADER-->
+
+    <section class="container">
         <h1>¿Cómo comprar?</h1>
-        <p>
+        <p class="text">
             Las compras las puedes realizar a través de nuestras redes sociales en Facebook o Instagram.
         </p>
     </section>
-        <section class="how2buy">
-                <figure class="how2buy__step" ><img src="../image/paso1.jpg"><figcaption>Elige el diseño</figcaption></figure>
-                <figure class="how2buy__step" ><img src="../image/paso2.jpg"><figcaption>Elige tu color favorito</figcaption></figure>
-                <figure class="how2buy__step" ><img src="../image/paso3.jpg"><figcaption>Contáctanos en Facebook o Intagram</figcaption></figure>
-                <figure class="how2buy__step" ><img src="../image/paso4.jpg"><figcaption>Paga tu pedido</figcaption></figure>
-                <figure class="how2buy__step" ><img src="../image/paso5.jpg"><figcaption>Proporciona datos de envío</figcaption></figure>
-                <figure class="how2buy__step" ><img src="../image/paso6.jpg"><figcaption>Espera al repartidor</figcaption></figure>
-                <figure class="how2buy__step" ><img src="../image/paso7.jpg"><figcaption>¡Disfruta!</figcaption></figure>
+        <section class="how2buy container">
+            <ul class="text">
+                <li class="d-flex justify-content-between align-items-center"> Elige el diseño <figure class="how2buy__step" ><img src="../image/paso1.jpg"></figure></li>
+                <li class="d-flex justify-content-between align-items-center"> Elige tu color favorito <figure class="how2buy__step" ><img src="../image/paso2.jpg"></figure></li>
+                <li class="d-flex justify-content-between align-items-center"> Contáctanos en Facebook o Intagram <figure class="how2buy__step" ><img src="../image/paso3.jpg"></figure></li>
+                <li class="d-flex justify-content-between align-items-center"> Paga tu pedido <figure class="how2buy__step" ><img src="../image/paso4.jpg"></figure></li>
+                <li class="d-flex justify-content-between align-items-center"> Proporciona datos de envío <figure class="how2buy__step" ><img src="../image/paso5.jpg"></figure></li>
+                <li class="d-flex justify-content-between align-items-center"> Espera al repartidor <figure class="how2buy__step" ><img src="../image/paso6.jpg"></figure></li>
+                <li class="d-flex justify-content-between align-items-center"> ¡Disfruta! <figure class="how2buy__step" ><img src="../image/paso7.jpg"></figure></li>
+            </ul>
         </section>
 
         <hr>
-        <section class="how2buy_FAQ">
-            <p>Preguntas Frecuentes</p>
-            <ol class="FAQ">
+        <section class="container">
+            <p class="text">Preguntas Frecuentes</p>
+            <ol class="text">
                 <li>¿Nos gusta lo que hacemos?</li>
                 - ¡Amamos!
                 <li>¿Hay envíos nacionales?</li>
@@ -51,15 +78,30 @@
                 -Si! Envíanos mensaje privado por Facebook o Instagram.
             </ol>
         </section>
-    <!---Inicio Footer-->
-    <footer class="container_footer">
-        <div class="footer__copyright">
-            <p class="footer__copyright__text">Todos los derechos reservados</p>
+        
+    <!--START FOOTER-->
+    <footer class="bg-light text-center text-white">
+        <div class="p-4 pb-0" style="background-color: #9F6272;">
+            <section>
+                <a class="btn btn-floating m-1 " href="https://www.facebook.com" role="button">
+                    <img class="img-thumbnail footer__thumbnail" src="../image/fb.jpg">
+                </a>
+                <a class="btn btn-floating m-1" href="https://www.instagram.com" role="button">
+                    <img class="img-thumbnail footer__thumbnail" src="../image/ig.jpg">
+                </a>
+            </section>
         </div>
-        <div class="footer__redes">
-            <p class="footer__redes__text">Redes Sociales</p>
+        <div class="text-center p-3" style="background-color: #9F6272;">
+            © 2022 Copyright
+            <a class="text-white" href="#"></a>
         </div>
     </footer>
-    <!---.Fin Footer-->
+    <!--END FOOTER-->
+
+    <!--Bootstrap Scripts-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
 </body>
 </html>

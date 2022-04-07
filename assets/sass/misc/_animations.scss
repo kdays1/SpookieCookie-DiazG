@@ -4,8 +4,28 @@
 h1:hover {
     font-size: 60px;
 }
-.prod__muestra_img:hover{
+.prod__muestra_img:hover,.productos__image:hover,.productos_image:hover{
     width: 310px;
+}
+@media screen and (min-width: 600px) and (max-width:1150px){
+    .productos__image{
+        width: 250px;
+        height: 320px;
+        margin: 5px;
+    }
+    .how2buy{
+        flex-direction: column;
+    }
+    .how2buy__step>img{
+        display: none;
+    }
+}
+@media screen and (min-width: 991px) and (max-width:1199px){
+    img.productos_image{
+        width: 290px;
+        height: 360px;
+        margin: 5px;
+    }
 }
 @media screen and (max-width:779px){
     .inspo_text{
@@ -23,6 +43,19 @@ h1:hover {
         height: 60px;
         width: 60px;
         margin: 2px;
+    }
+}
+@media screen and (max-width: 599px){
+    .productos__image{
+        width: 250px;
+        height: 320px;
+        margin: 5px;
+    }
+    .how2buy{
+        flex-direction: column;
+    }
+    .how2buy__step>img{
+        display: none;
     }
 }
 @keyframes ghost{
