@@ -16,12 +16,15 @@ h1 {
   animation-iteration-count: 2;
   transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
 
-.text {
+.text, .text-small {
   font-family: 'League Spartan', sans-serif;
   color: #743A25;
   text-align: justify;
   padding: 10px;
   font-size: 1.5rem; }
+
+.text-small {
+  font-size: 1.3rem; }
 
 .linksnav:hover {
   color: #482F5F; }
@@ -58,8 +61,8 @@ h1:hover {
 
 @media screen and (max-width: 550px) {
   img.secret {
-    height: 60px;
     width: 60px;
+    height: 60px;
     margin: 2px; } }
 
 @media screen and (max-width: 599px) {
@@ -96,7 +99,7 @@ h1:hover {
   100% {
     transform: translateX(330px); } }
 
-@keyframes eatme {
+@keyframes eatme1 {
   0% {
     transform: translateX(70px);
     opacity: 0.4; }
@@ -139,8 +142,7 @@ h1:hover {
     transform: translateX(100px);
     opacity: 0; }
   20% {
-    transform: translateX(130px);
-    opacity: 0.4; }
+    transform: translateX(130px); }
   30% {
     transform: translateX(160px);
     opacity: 0.4; }
@@ -258,20 +260,32 @@ header {
   opacity: 0.5;
   width: 40px; }
 
-.cookies {
+.cookie1 {
   position: absolute;
   transform: translateX(60px);
   top: 20vh;
   opacity: 0;
   width: 40px;
-  height: 40px; }
+  height: 40px;
+  animation: eatme1 12s infinite; }
 
-.cookie {
-  animation: eatme 12s infinite; }
-  .cookie2 {
-    animation: eatme2 12s infinite; }
-  .cookie3 {
-    animation: eatme3 12s infinite; }
+.cookie2 {
+  position: absolute;
+  transform: translateX(60px);
+  top: 20vh;
+  opacity: 0;
+  width: 40px;
+  height: 40px;
+  animation: eatme2 12s infinite; }
+
+.cookie3 {
+  position: absolute;
+  transform: translateX(60px);
+  top: 20vh;
+  opacity: 0;
+  width: 40px;
+  height: 40px;
+  animation: eatme3 12s infinite; }
 
 .inspo__img {
   width: 50%;
@@ -282,19 +296,32 @@ header {
   height: 320px;
   padding: 5px; }
 
-.secret {
+.secret1 {
   opacity: 0;
   top: 20vh;
   right: auto;
   width: 70px;
   height: 70px;
-  margin: 10px; }
-  .secret1 {
-    animation: floating1 10s ease-in-out infinite; }
-  .secret2 {
-    animation: floating2 10s ease-in-out infinite; }
-  .secret3 {
-    animation: floating3 10s ease-in-out infinite; }
+  margin: 10px;
+  animation: floating1 10s ease-in-out infinite; }
+
+.secret2 {
+  opacity: 0;
+  top: 20vh;
+  right: auto;
+  width: 70px;
+  height: 70px;
+  margin: 10px;
+  animation: floating2 10s ease-in-out infinite; }
+
+.secret3 {
+  opacity: 0;
+  top: 20vh;
+  right: auto;
+  width: 70px;
+  height: 70px;
+  margin: 10px;
+  animation: floating3 10s ease-in-out infinite; }
 
 .productos_image {
   width: 250px;

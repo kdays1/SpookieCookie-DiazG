@@ -1,17 +1,10 @@
-.secret{
-    opacity: 0;
-    top: 20vh;
-    right: auto;
-    width: 70px;
-    height: 70px;
-    margin: 10px;
-    &1{
-        animation: floating1 10s ease-in-out infinite;
-    }
-    &2{
-        animation: floating2 10s ease-in-out infinite;
-    }
-    &3{
-        animation: floating3 10s ease-in-out infinite;
+@each $key, $value in $secret{
+    .#{$value} {
+        opacity: 0;
+        top: 20vh;
+        right: auto;
+        @include msr(70px,70px);
+        margin: 10px;
+        animation: floating#{$key} 10s ease-in-out infinite
     }
 }

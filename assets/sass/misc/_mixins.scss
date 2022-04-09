@@ -1,3 +1,7 @@
+@mixin msr($w, $h) {
+    width: $w;
+    height: $h;
+} 
 h1{
     text-align: center;
     font-family: 'Fredoka', sans-serif;
@@ -14,4 +18,8 @@ h1{
     text-align: justify;
     padding: 10px;
     font-size: 1.5rem;
+}
+.text-small {
+    @extend .text;
+    font-size: 1.3rem;
 }

@@ -1,5 +1,4 @@
 .productos_image{
-    width: 250px;
-    height: 320px;
+    @include msr(250px,320px);
     margin: 5px;
 }

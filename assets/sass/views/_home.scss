@@ -6,21 +6,14 @@
     opacity: 0.5;
     width: 40px;
 }
-.cookies{
-    position:absolute;
-    transform: translateX(60px);
-    top:20vh;
-    opacity: 0;
-    width: 40px;
-    height: 40px;
-}
-.cookie{
-    animation: eatme 12s infinite;
-    &2{
-        animation: eatme2 12s infinite;
-    }
-    &3{
-        animation: eatme3 12s infinite;
+@each $key1, $value2 in $cookies{
+    .#{$value2} {
+        position:absolute;
+        transform: translateX(60px);
+        top:20vh;
+        opacity: 0;
+        @include msr(40px,40px);
+        animation: eatme#{$key1} 12s infinite;
     }
 }
 
@@ -29,7 +22,6 @@
     min-width: 300px;
 }
 .prod__muestra_img{
-    width: 230px;
-    height: 320px;
+    @include msr(230px,320px);
     padding: 5px;
 }
