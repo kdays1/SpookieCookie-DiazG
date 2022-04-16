@@ -105,7 +105,7 @@ h1:hover {
     }
     30%{
         transform: translateX(110px);
-        opacity:map-get($opacities, op04);
+        opacity:map-get($opacities, op0);
     }
     40%{
         opacity:map-get($opacities, op0);
@@ -149,7 +149,7 @@ h1:hover {
     }
     50%{
         transform: translateX(120px);
-        opacity:map-get($opacities, op04);
+        opacity:map-get($opacities, op0);
     }
     60%{
         opacity:map-get($opacities, op0);
