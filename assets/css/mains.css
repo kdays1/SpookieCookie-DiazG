@@ -75,6 +75,20 @@ h1:hover {
   .how2buy__step > img {
     display: none; } }
 
+@media screen and (max-width: 390px) {
+  img.secret1 {
+    width: 50px;
+    height: 50px;
+    margin: 5px; }
+  img.secret2 {
+    width: 50px;
+    height: 50px;
+    margin: 5px; }
+  img.secret3 {
+    width: 50px;
+    height: 50px;
+    margin: 5px; } }
+
 @keyframes ghost {
   0% {
     transform: translateX(30px); }
@@ -101,106 +115,82 @@ h1:hover {
 
 @keyframes eatme1 {
   0% {
+    opacity: 0; }
+  10% {
     transform: translateX(70px);
     opacity: 0.4; }
-  10% {
-    transform: translateX(100px);
-    opacity: 0.4; }
   20% {
-    transform: translateX(130px);
+    transform: translateX(90px);
     opacity: 0.4; }
   30% {
-    transform: translateX(160px);
-    opacity: 0; }
+    transform: translateX(110px);
+    opacity: 0.4; }
   40% {
-    transform: translateX(180px);
     opacity: 0; }
   50% {
-    transform: translateX(210px);
     opacity: 0; }
   60% {
-    transform: translateX(240px);
     opacity: 0; }
   70% {
-    transform: translateX(270px);
     opacity: 0; }
   80% {
-    transform: translateX(290px);
     opacity: 0; }
   90% {
-    transform: translateX(300px);
     opacity: 0; }
   100% {
-    transform: translateX(330px);
     opacity: 0; } }
 
 @keyframes eatme2 {
   0% {
-    transform: translateX(70px);
     opacity: 0; }
   10% {
-    transform: translateX(100px);
     opacity: 0; }
-  20% {
-    transform: translateX(130px); }
+  20% { }
   30% {
-    transform: translateX(160px);
-    opacity: 0.4; }
+    transform: translateX(80px);
+    opacity: 0; }
   40% {
-    transform: translateX(180px);
+    transform: translateX(100px);
     opacity: 0.4; }
   50% {
-    transform: translateX(210px);
-    opacity: 0; }
+    transform: translateX(120px);
+    opacity: 0.4; }
   60% {
-    transform: translateX(240px);
     opacity: 0; }
   70% {
-    transform: translateX(270px);
     opacity: 0; }
   80% {
-    transform: translateX(290px);
     opacity: 0; }
   90% {
-    transform: translateX(300px);
     opacity: 0; }
   100% {
-    transform: translateX(330px);
     opacity: 0; } }
 
 @keyframes eatme3 {
   0% {
-    transform: translateX(70px);
     opacity: 0; }
   10% {
-    transform: translateX(100px);
     opacity: 0; }
   20% {
-    transform: translateX(130px);
     opacity: 0; }
   30% {
-    transform: translateX(160px);
     opacity: 0; }
   40% {
-    transform: translateX(180px);
-    opacity: 0.4; }
+    opacity: 0; }
   50% {
-    transform: translateX(210px);
-    opacity: 0.4; }
+    opacity: 0; }
   60% {
-    transform: translateX(240px);
+    transform: translateX(110px);
     opacity: 0.4; }
   70% {
-    transform: translateX(270px);
+    transform: translateX(130px);
     opacity: 0.4; }
   80% {
-    transform: translateX(290px);
-    opacity: 0.4; }
+    transform: translateX(140px);
+    opacity: 0; }
   90% {
-    transform: translateX(300px);
     opacity: 0; }
   100% {
-    transform: translateX(330px);
     opacity: 0; } }
 
 @keyframes floating1 {
@@ -253,7 +243,6 @@ header {
 
 /*VIEWS*/
 .spookie {
-  position: absolute;
   transform: translateX(30px);
   top: 20vh;
   animation: ghost 12s ease-in-out infinite;
@@ -261,31 +250,28 @@ header {
   width: 40px; }
 
 .cookie1 {
-  position: absolute;
   transform: translateX(60px);
   top: 20vh;
   opacity: 0;
   width: 40px;
   height: 40px;
-  animation: eatme1 12s infinite; }
+  animation: eatme1 12s ease-in infinite; }
 
 .cookie2 {
-  position: absolute;
   transform: translateX(60px);
   top: 20vh;
   opacity: 0;
   width: 40px;
   height: 40px;
-  animation: eatme2 12s infinite; }
+  animation: eatme2 12s ease-in infinite; }
 
 .cookie3 {
-  position: absolute;
   transform: translateX(60px);
   top: 20vh;
   opacity: 0;
   width: 40px;
   height: 40px;
-  animation: eatme3 12s infinite; }
+  animation: eatme3 12s ease-in infinite; }
 
 .inspo__img {
   width: 50%;

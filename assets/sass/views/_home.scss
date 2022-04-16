@@ -1,5 +1,5 @@
 .spookie{
-    position: absolute;
+
     transform: translateX(30px);
     top: 20vh;
     animation: ghost 12s ease-in-out infinite;
@@ -8,12 +8,11 @@
 }
 @each $key1, $value2 in $cookies{
     .#{$value2} {
-        position:absolute;
         transform: translateX(60px);
         top:20vh;
         opacity: 0;
         @include msr(40px,40px);
-        animation: eatme#{$key1} 12s infinite;
+        animation: eatme#{$key1} 12s ease-in infinite;
     }
 }
 
