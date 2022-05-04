@@ -4,3 +4,27 @@
         @include msr(100px,100px);
     }
 }
+.thetable{
+    display:table;
+    table-layout: fixed;
+    width: 100%;
+    &cell{
+    float: none;
+    display: table-cell;
+    vertical-align: middle;
+    }
+}
+.card{
+    // background-image: linear-gradient(to bottom, #e3a4c6, #e99db3, #ea989e, #e6958a);
+    // background-color: #b66177;
+    background-color: #DE7A8E;
+    margin-top: 5px;
+    &-header{
+    background-color: #b66177;
+    border-color: #9F6272;
+    border: 1px solid;
+    }
+    &-link:hover{
+        color: #482F5F;
+    }
+}

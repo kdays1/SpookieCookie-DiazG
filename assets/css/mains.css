@@ -16,7 +16,7 @@ h1 {
   animation-iteration-count: 2;
   transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
 
-.text, .text-small {
+.text, .text-small, .text-small-ctc {
   font-family: 'League Spartan', sans-serif;
   color: #743A25;
   text-align: justify;
@@ -24,7 +24,11 @@ h1 {
   font-size: 1.5rem; }
 
 .text-small {
-  font-size: 1.3rem; }
+  font-size: 1.3rem;
+  text-align: center; }
+  .text-small-ctc {
+    font-size: 1.3rem;
+    padding: 10px; }
 
 .linksnav:hover {
   color: #482F5F; }
@@ -69,7 +73,7 @@ h1:hover {
   .how2buy__step > img {
     display: none; } }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 539px) {
   picture > .secret1 {
     width: 50px;
     height: 50px;
@@ -82,6 +86,11 @@ h1:hover {
     width: 50px;
     height: 50px;
     margin: 5px; } }
+
+@media screen and (max-width: 769px) {
+  li.thetablecell {
+    display: table-row;
+    padding-bottom: 10px; } }
 
 @keyframes ghost {
   0% {
@@ -308,8 +317,44 @@ header {
   height: 320px;
   margin: 5px; }
 
+.colors {
+  width: 120px;
+  height: 150px;
+  text-align: center;
+  padding: 5px; }
+
+.examples {
+  width: 220px;
+  height: 250px;
+  text-align: center;
+  padding: 5px; }
+
 .how2buy__step {
   margin: 2px; }
   .how2buy__step > img {
     width: 100px;
     height: 100px; }
+
+.thetable {
+  display: table;
+  table-layout: fixed;
+  width: 100%; }
+  .thetablecell {
+    float: none;
+    display: table-cell;
+    vertical-align: middle; }
+
+.card {
+  background-color: #DE7A8E;
+  margin-top: 5px; }
+  .card-header {
+    background-color: #b66177;
+    border-color: #9F6272;
+    border: 1px solid; }
+  .card-link:hover {
+    color: #482F5F; }
+
+.btn-primary {
+  background-color: #9F6272;
+  border-color: #743A25;
+  margin: 10px; }

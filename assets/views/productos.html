@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500&family=League+Spartan&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="../css/mains.css" rel="stylesheet" type="text/css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 </head>
 <body style="background-image: linear-gradient(to bottom, #e3a4c6, #e99db3, #ea989e, #e6958a, #dd9576);">
     <header>
@@ -49,93 +50,117 @@
 
     <div class="container">
         <h1>Productos</h1>
+        <!--COLOR-->
+        <h2 class="text">Paso 1: Elige tu color favorito y talla</h2>
         <section class="d-flex flex-wrap justify-content-around align-items-center">
-            <div class="productos_info text">
-                Chamarra Mágica 1 
-                <ul>
-                    Precio: $1234 <br>
-                    Talla(s): CH | M | G <br>
-                    Medidas: ancho= | largo= <br>
-                    Detalles:
-                </ul>
+            <div class="card" style="width: 10rem;">
+                <img class="card-img-top colors mx-auto d-block" src="../image/babyblue.png" alt="chamarra">
+                <div class="card-body">
+                    <p class="card-text text-small">Talla CH | M | G</p>
+                </div>
             </div>
-                <picture><img class="productos_image" src="../image/chamarra1.1.jpg"></picture>
-                <picture><img class="productos_image" src="../image/chamarra1.2.jpg"></picture>
-                <picture><img class="productos_image" src="../image/chamarra1.3.jpg"></picture>
+    
+            <div class="card" style="width: 10rem;">
+                <img class="card-img-top colors mx-auto d-block" src="../image/blue.png" alt="chamarra">
+                <div class="card-body">
+                    <p class="card-text text-small">Talla: CH | M | G</p>
+                </div>
+            </div>
+    
+            <div class="card" style="width: 10rem;">
+                <img class="card-img-top colors mx-auto d-block" src="../image/green.png" alt="chamarra">
+                <div class="card-body">
+                    <p class="card-text text-small">Talla: CH | M | G</p>
+                </div>
+            </div>
+    
+            <div class="card" style="width: 10rem;">
+                <img class="card-img-top colors mx-auto d-block" src="../image/lila.png" alt="chamarra">
+                <div class="card-body">
+                    <p class="card-text text-small">Talla: CH | M | G</p>
+                </div>
+            </div>
+    
+            <div class="card" style="width: 10rem;">
+                <img class="card-img-top colors mx-auto d-block" src="../image/peach.png" alt="chamarra">
+                <div class="card-body">
+                    <p class="card-text text-small">Talla: CH | M | G</p>
+                </div>
+            </div>
+
+            <div class="card" style="width: 10rem;">
+                <img class="card-img-top colors mx-auto d-block" src="../image/pink.png" alt="chamarra">
+                <div class="card-body">
+                    <p class="card-text text-small">Talla: CH | M | G</p>
+                </div>
+            </div>
         </section>
-    </div>
-    <br>
-    <br>
-    <div class="container">
+
+        <!--DISEÑOS-->
+        <h2 class="text">Paso 2: Elige la frase que más te guste</h2>
         <section class="d-flex flex-wrap justify-content-around align-items-center">
-            <div class="productos_info text">
-                Chamarra Mágica 2 
-                <ul>
-                    Precio: $2345 <br>
-                    Talla(s): CH | M | G <br>
-                    Medidas: ancho= | largo= <br>
-                    Detalles: <br>
-                </ul>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card card-phrase">
+                        <div class="card-body">
+                            <h5 class="card-title text">Aprende a amar</h5>
+                            <p class="card-text text-small">Izquierda: Eres suficiente y amada<br>
+                            Derecha: Sé por ti y para ti
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card card-phrase">
+                        <div class="card-body">
+                            <h5 class="card-title text">Hazlo brillar</h5>
+                            <p class="card-text text-small">Izquierda: No temas a la oscuridad<br>
+                            Derecha: Brillas como estrella
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card card-phrase">
+                        <div class="card-body">
+                            <h5 class="card-title text">Valora los días</h5>
+                            <p class="card-text text-small">Izquierda: Eres única e imperfecta<br>
+                            Derecha: Eso te hace mágica
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card card-phrase">
+                        <div class="card-body">
+                            <h5 class="card-title text">Yo soy</h5>
+                            <p class="card-text text-small">Izquierda: Sé la mejor versión de tí<br>
+                            Derecha: y ámate por ello
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-                <picture><img class="productos_image" src="../image/chamarra2.1.jpg"></picture>
-                <picture><img class="productos_image" src="../image/chamarra2.2.jpg"></picture>
-                <picture><img class="productos_image" src="../image/chamarra2.3.jpg"></picture>
         </section>
-    </div>
-    <br>
-    <br>
-    <div class="container">
+
+        <h2 class="text">Ejemplos</h2>
         <section class="d-flex flex-wrap justify-content-around align-items-center">
-            <div class="productos_info text">
-                Chamarra Mágica 3 
-                <ul>
-                    Precio: $3456 <br>
-                    Talla(s): CH | M | G <br>
-                    Medidas: ancho= | largo= <br>
-                    Detalles: 
-                </ul>
+            <div class="card" style="width: 17rem;">
+                <img class="card-img-top examples mx-auto d-block" src="../image/example1.jpg" alt="chamarra">
+                <div class="card-body">
+                    <p class="card-text text-small">Valora los días</p>
+                </div>
             </div>
-                <picture><img class="productos_image" src="../image/chamarra3.1.jpg"></picture>
-                <picture><img class="productos_image" src="../image/chamarra3.2.jpg"></picture>
-                <picture><img class="productos_image" src="../image/chamarra3.3.jpg"></picture>
-        </section>
-    </div>
-    <br>
-    <br>
-    <div class="container">
-        <section class="d-flex flex-wrap justify-content-around align-items-center">
-            <div class="productos_info text">
-                Chamarra Mágica 4 
-                <ul>
-                    Precio: $4567 <br>
-                    Talla(s): CH | M | G <br>
-                    Medidas: ancho= | largo= <br>
-                    Detalles: 
-                </ul>
+    
+            <div class="card" style="width: 17rem;">
+                <img class="card-img-top examples mx-auto d-block" src="../image/example2.jpg" alt="chamarra">
+                <div class="card-body">
+                    <p class="card-text text-small">Yo soy</p>
+                </div>
             </div>
-                <picture><img class="productos_image" src="../image/chamarra4.1.jpg"></picture>
-                <picture><img class="productos_image" src="../image/chamarra4.2.jpg"></picture>
-                <picture><img class="productos_image" src="../image/chamarra4.3.jpg"></picture>
-        </section>
+        </section>s
     </div>
-    <br>
-    <br>
-    <div class="container">
-        <section class="d-flex flex-wrap justify-content-around align-items-center">
-            <div class="productos_info text">
-                Chamarra Mágica 5 
-                <ul>
-                    Precio: $5678 <br>
-                    Talla(s): CH | M | G <br>
-                    Medidas: ancho= | largo= <br>
-                    Detalles: 
-                </ul>
-            </div>
-                <picture><img class="productos_image" src="../image/chamarra5.1.jpg"></picture>
-                <picture><img class="productos_image" src="../image/chamarra5.2.jpg"></picture>
-                <picture><img class="productos_image" src="../image/chamarra5.3.jpg"></picture>
-        </section>
-    </div>
+
     <br>
     <br>
     <!--START FOOTER-->

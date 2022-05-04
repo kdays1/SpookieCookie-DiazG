@@ -48,12 +48,18 @@ h1:hover {
         display: none;
     }
 }
-@media screen and (max-width: 390px){
+@media screen and (max-width: 539px){
     @each $key, $value in $secret{
         picture > .#{$value} {
             @include msr(50px,50px);
             margin: 5px;
         }
+    }
+}
+@media screen and (max-width: 769px){
+    li.thetablecell{
+        display: table-row;
+        padding-bottom: 10px;
     }
 }
 @keyframes ghost{

@@ -47,41 +47,44 @@
     </header>
     <!--END HEADER-->
     <section class="container">
-        <h1>Contacto</h1>
-        <p class="text">Cualquier comentario o duda que tengas y no cuentes con redes sociales, puedes enviarnos un correo. Anota tus datos en el siguiente formulario y te responderemos lo más pronto posible.</p>
-        <form action="" method="POST" enctype="">
+        <div>
+            <h1>Contacto</h1>
+            <p class="text">Cualquier comentario o duda que tengas y no cuentes con redes sociales, puedes enviarnos un correo. Anota tus datos en el siguiente formulario y te responderemos lo más pronto posible.</p>
+        </div>
+            <form action="" method="" enctype="">
             <div class="form-group row">
-                <label for="inputName" class="col-sm-2 col-form-label">Nombre Completo</label>
-                <div class="col-sm-10">
+                <label for="inputName" class="col-sm-2 col-form-label text-small-ctc">Nombre Completo</label>
+                <div class="col-sm-9">
                     <input type="text" class="form-control" id="inputName" placeholder="Ingresa tu Nombre Completo">
                 </div>
             </div>
             <div class="form-group row">
-                <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
-                <div class="col-sm-10">
+                <label for="inputEmail" class="col-sm-2 col-form-label text-small-ctc">Email</label>
+                <div class="col-sm-9">
                     <input type="email" class="form-control" id="inputEmail" placeholder="Ingresa tu Email">
                 </div>
             </div>
             <div class="form-group row">
-                <label for="inputPhone" class="col-sm-2 col-form-label">Teléfono</label>
-                <div class="col-sm-10">
+                <label for="inputPhone" class="col-sm-2 col-form-label text-small-ctc">Teléfono</label>
+                <div class="col-sm-9">
                     <input type="tel" class="form-control" id="inputPhone" placeholder="Ingresa tu teléfono">
                 </div>
             </div>
             <div class="form-group row">
-                <label for="inputComm" class="col-sm-6 col-md-6 col-lg-2 col-form-label">Dudas/Comentarios</label>
-                <div class="col-sm-10">
-                    <input type="tel" class="form-control" id="inputComm" placeholder="Dudas y/o Comentarios" style="height:120px; width:200px;">
+                <label for="inputComm" class="col-sm-2 col-form-label text-small-ctc">Dudas</label>
+                <div class="col-sm-9">
+                    <textarea type="textarea" class="form-control" id="inputComm" placeholder="Dudas"></textarea>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col">
                     <button type="submit" class="btn btn-primary">Enviar</button>
-                </div>
-                <div class="col">
                     <button type="reset" class="btn btn-primary">Reset</button>
                 </div>
+                <!-- <div class="col">
+                    
+                </div> -->
             </div>
         </form>
     </section>

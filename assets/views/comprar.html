@@ -12,6 +12,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500&family=League+Spartan&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="../css/mains.css" rel="stylesheet" type="text/css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 </head>
 <body style="background-image: linear-gradient(to bottom, #e3a4c6, #e99db3, #ea989e, #e6958a, #dd9576);">
     <!--START HEADER-->
@@ -55,32 +57,90 @@
         </p>
     </section>
         <section class="how2buy container">
-            <ul class="text-small">
-                <li class="d-flex justify-content-between align-items-center"> Elige el diseño <figure class="how2buy__step" ><img src="../image/paso1.jpg"></figure></li>
-                <li class="d-flex justify-content-between align-items-center"> Elige tu color favorito <figure class="how2buy__step" ><img src="../image/paso2.jpg"></figure></li>
-                <li class="d-flex justify-content-between align-items-center"> Contáctanos en Facebook o Intagram <figure class="how2buy__step" ><img src="../image/paso3.jpg"></figure></li>
-                <li class="d-flex justify-content-between align-items-center"> Paga tu pedido <figure class="how2buy__step" ><img src="../image/paso4.jpg"></figure></li>
-                <li class="d-flex justify-content-between align-items-center"> Proporciona datos de envío <figure class="how2buy__step" ><img src="../image/paso5.jpg"></figure></li>
-                <li class="d-flex justify-content-between align-items-center"> Espera al repartidor <figure class="how2buy__step" ><img src="../image/paso6.jpg"></figure></li>
-                <li class="d-flex justify-content-between align-items-center"> ¡Disfruta! <figure class="how2buy__step" ><img src="../image/paso7.jpg"></figure></li>
+            <ul class="text-small thetable">
+                <li class="thetablecell"> 
+                    <i class="bi bi-magic"></i>
+                    <h5>Elige el diseño</h5>
+                </li>
+                <li class="thetablecell"> 
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-facebook"></i>
+                    <h5>Contáctanos</h5>
+                </li>
+                <li class="thetablecell"> 
+                    <i class="bi bi-cart-check"></i>
+                    <h5>Realiza el pago</h5>
+                </li>
+                <li class="thetablecell"> 
+                    <i class="bi bi-gift"></i>
+                    <h5>Recibe tu pedido</h5>
+                </li>
+                <li class="thetablecell"> 
+                    <i class="bi bi-balloon-heart"></i>
+                    <h5>¡Disfruta!</h5>
+                </li>
             </ul>
         </section>
 
         <hr>
         <section class="container">
             <p class="text">Preguntas Frecuentes</p>
-            <ol class="text-small">
-                <li>¿Nos gusta lo que hacemos?</li>
-                - ¡Amamos!
-                <li>¿Hay envíos nacionales?</li>
-                - ¡Claro que si!
-                <li>¿Cuánto cuestan los envíos nacionales?</li>
-                - Cientoveinte pesos mexicanos
-                <li>¿Puedo pedir un diseño personalizado?</li>
-                -Si! Envíanos mensaje privado por Facebook o Instagram.
-            </ol>
+                <div id="accordionFAQ">
+                    <!--FirstQuestion-->
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="card-link text" data-toggle="collapse" href="#collapseOne">
+                                ¿Nos gusta lo que hacemos?
+                            </a>
+                        </div>
+                        <div id="collapseOne" class="collapse show text" data-parent="#accordionFAQ">
+                            <div class="card-body">
+                                ¡Amamos!
+                            </div>
+                        </div>
+                    </div>
+                    <!--SecondQuestion-->
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="card-link text" data-toggle="collapse" href="#collapseTwo">
+                                ¿Hacemos envíos nacionales?
+                            </a>
+                        </div>
+                        <div id="collapseTwo" class="collapse show text" data-parent="#accordionFAQ">
+                            <div class="card-body">
+                                ¡Claro que sí!
+                            </div>
+                        </div>
+                    </div>
+                    <!--ThirdQuestion-->
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="card-link text" data-toggle="collapse" href="#collapseThree">
+                                ¿Cuánto cuestan los envíos nacionales?
+                            </a>
+                        </div>
+                        <div id="collapseThree" class="collapse show text" data-parent="#accordionFAQ">
+                            <div class="card-body">
+                                Depende de tu estado pero en promedio: $120 MXN
+                            </div>
+                        </div>
+                    </div>
+                    <!--FourthQuestion-->
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="card-link text" data-toggle="collapse" href="#collapseFour">
+                                ¿Se pueden hacer diseños personalizados?
+                            </a>
+                        </div>
+                        <div id="collapseFour" class="collapse show text data-parent="#accordionFAQ">
+                            <div class="card-body">
+                                ¡Sí! Mándanos un mensaje privado por Instagram o Facebook
+                            </div>
+                        </div>
+                    </div>
+                </div>
         </section>
-        
+        <br>
     <!--START FOOTER-->
     <footer class="bg-light text-center text-white">
         <div class="p-4 pb-0" style="background-color: #9F6272;">
