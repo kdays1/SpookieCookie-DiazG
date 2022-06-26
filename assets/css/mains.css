@@ -338,6 +338,31 @@ header {
 .container-selecting {
   text-align: center; }
 
+.size {
+  background-color: pink;
+  border: solid 2px fuchsia;
+  text-align: center;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  font-size: 1rem;
+  width: 40px; }
+
+.colored, .phrases {
+  background: none;
+  color: inherit;
+  border: none; }
+
+.disabled {
+  pointer-events: none; }
+
+.selected {
+  border: solid 6px #9F6272; }
+
+button:active {
+  border: none; }
+
 .how2buy__step {
   margin: 2px; }
   .how2buy__step > img {

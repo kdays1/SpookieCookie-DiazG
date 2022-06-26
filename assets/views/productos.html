@@ -57,97 +57,126 @@
         </div> -->
         <h2 class="text">Paso 1: Elige tu color favorito y talla</h2>
         <section class="d-flex flex-wrap justify-content-around align-items-center">
-            <div class="card" style="width: 10rem;">
-                <img class="card-img-top colors mx-auto d-block" src="../image/babyblue.png" alt="chamarra">
+            <div class="card" style="width: 10rem; height: 308px;">
+                <button id="colorSerenity" class="colored"><img class="card-img-top colors mx-auto d-block" src="../image/babyblue.png" alt="chamarra"></button>
                 <div class="card-body">
-                    <p class="card-text text-small">Talla CH | M | G</p>
+                    <p class="card-text text-small">Color Serenity</p>
                 </div>
             </div>
     
-            <div class="card" style="width: 10rem;">
-                <img class="card-img-top colors mx-auto d-block" src="../image/blue.png" alt="chamarra">
+            <div class="card" style="width: 10rem; height: 308px;">
+                <button id="colorSnorkelBlue" class="colored"><img class="card-img-top colors mx-auto d-block" src="../image/blue.png" alt="chamarra"></button>
                 <div class="card-body">
-                    <p class="card-text text-small">Talla: CH | M | G</p>
+                    <p class="card-text text-small">Color Snorkel Blue</p>
                 </div>
             </div>
     
-            <div class="card" style="width: 10rem;">
-                <img class="card-img-top colors mx-auto d-block" src="../image/green.png" alt="chamarra">
+            <div class="card" style="width: 10rem; height: 308px;">
+                <button id="colorGreenFlash" class="colored"><img class="card-img-top colors mx-auto d-block" src="../image/green.png" alt="chamarra"></button>
                 <div class="card-body">
-                    <p class="card-text text-small">Talla: CH | M | G</p>
+                    <p class="card-text text-small">Color Green Flash</p>
                 </div>
             </div>
     
-            <div class="card" style="width: 10rem;">
-                <img class="card-img-top colors mx-auto d-block" src="../image/lila.png" alt="chamarra">
+            <div class="card" style="width: 10rem; height: 308px;">
+                <button id="colorLilacGray" class="colored"><img class="card-img-top colors mx-auto d-block" src="../image/lila.png" alt="chamarra"></button>
                 <div class="card-body">
-                    <p class="card-text text-small">Talla: CH | M | G</p>
+                    <p class="card-text text-small">Color Lilac Gray</p>
                 </div>
             </div>
     
-            <div class="card" style="width: 10rem;">
-                <img class="card-img-top colors mx-auto d-block" src="../image/peach.png" alt="chamarra">
+            <div class="card" style="width: 10rem; height: 308px;">
+                <button id="colorPeachEcho" class="colored"><img class="card-img-top colors mx-auto d-block" src="../image/peach.png" alt="chamarra"></button>
                 <div class="card-body">
-                    <p class="card-text text-small">Talla: CH | M | G</p>
+                    <p class="card-text text-small">Color Peach Echo</p>
                 </div>
             </div>
 
-            <div class="card" style="width: 10rem;">
-                <img class="card-img-top colors mx-auto d-block" src="../image/pink.png" alt="chamarra">
+            <div class="card" style="width: 10rem; height: 308px;">
+                <button id="colorRoseQuartz" class="colored"><img class="card-img-top colors mx-auto d-block" src="../image/pink.png" alt="chamarra"></button>
                 <div class="card-body">
-                    <p class="card-text text-small">Talla: CH | M | G</p>
+                    <p class="card-text text-small">Color Rose Quartz</p>
                 </div>
             </div>
         </section>
 
+        <h2 class="text">Paso 2: Elige la talla que más te guste</h2>
+        <div>
+            <div class="card" style="width: 12rem;">
+                <div class="card-body">
+                    <p class="card-text text-small">Talla:</p>
+                    <div class="d-flex flex-wrap justify-content-around align-items-center">
+                        <button id="chica" class="size">CH</button>
+                        <button id="mediana" class="size">M</button>
+                        <button id="grande" class="size">G</button>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!--DISEÑOS-->
-        <h2 class="text">Paso 2: Elige la frase que más te guste</h2>
+        <h2 class="text">Paso 3: Elige la frase que más te guste</h2>
         <section class="d-flex flex-wrap justify-content-around align-items-center">
             <div class="row">
                 <div class="col-sm-6">
-                    <div class="card card-phrase">
-                        <div class="card-body">
-                            <h5 class="card-title text">Aprende a amar</h5>
-                            <p class="card-text text-small">Izquierda: Eres suficiente y amada<br>
-                            Derecha: Sé por ti y para ti
-                            </p>
+                    <button id="Aprende_a_Amar" class="phrases">
+                        <div class="card card-phrase">
+                            <div class="card-body">
+                                <h5 class="card-title text">Aprende a amar</h5>
+                                <p class="card-text text-small">Izquierda: Eres suficiente y amada<br>
+                                Derecha: Sé por ti y para ti
+                                </p>
+                            </div>
                         </div>
-                    </div>
+                    </button>
                 </div>
                 <div class="col-sm-6">
-                    <div class="card card-phrase">
-                        <div class="card-body">
-                            <h5 class="card-title text">Hazlo brillar</h5>
-                            <p class="card-text text-small">Izquierda: No temas a la oscuridad<br>
-                            Derecha: Brillas como estrella
-                            </p>
+                    <button id="Hazlo_Brillar" class="phrases">
+                        <div class="card card-phrase">
+                            <div class="card-body">
+                                <h5 class="card-title text">Hazlo brillar</h5>
+                                <p class="card-text text-small">Izquierda: No temas a la oscuridad<br>
+                                Derecha: Brillas como estrella
+                                </p>
+                            </div>
                         </div>
-                    </div>
+                    </button>
                 </div>
                 <div class="col-sm-6">
-                    <div class="card card-phrase">
-                        <div class="card-body">
-                            <h5 class="card-title text">Valora los días</h5>
-                            <p class="card-text text-small">Izquierda: Eres única e imperfecta<br>
-                            Derecha: Eso te hace mágica
-                            </p>
+                    <button id="Valora_los_dias" class="phrases">
+                        <div class="card card-phrase">
+                            <div class="card-body">
+                                <h5 class="card-title text">Valora los días</h5>
+                                <p class="card-text text-small">Izquierda: Eres única e imperfecta<br>
+                                Derecha: Eso te hace mágica
+                                </p>
+                            </div>
                         </div>
-                    </div>
+                    </button>
                 </div>
                 <div class="col-sm-6">
-                    <div class="card card-phrase">
-                        <div class="card-body">
-                            <h5 class="card-title text">Yo soy</h5>
-                            <p class="card-text text-small">Izquierda: Sé la mejor versión de tí<br>
-                            Derecha: y ámate por ello
-                            </p>
+                    <button id="Yo_Soy" class="phrases">
+                        <div class="card card-phrase">
+                            <div class="card-body">
+                                <h5 class="card-title text">Yo soy</h5>
+                                <p class="card-text text-small">Izquierda: Sé la mejor versión de tí<br>
+                                Derecha: y ámate por ello
+                                </p>
+                            </div>
                         </div>
-                    </div>
+                    </button>
                 </div>
             </div>
         </section>
+        <br>
+        <section>
+            <div>
+                <button id="PedirChamarra" class="btn btn-primary">
+                    Realizar mi pedido
+                </button>
+            </div>
+        </section>
 
-        <h2 class="text">Ejemplos</h2>
+        <h2 class="text">Ejemplos:</h2>
         <section class="d-flex flex-wrap justify-content-around align-items-center">
             <div class="card" style="width: 17rem;">
                 <img class="card-img-top examples mx-auto d-block" src="../image/example1.jpg" alt="chamarra">
