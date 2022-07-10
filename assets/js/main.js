@@ -10,15 +10,17 @@ let conteo_pedidos = 0;
 let pedidos = {};
 let bordado_frase = 'sin frase';
 let nompedido = undefined;
+const cart = [];
 
 // Clase chamarra
 class Chamarra {
-    constructor(talla, color, frase) {
+    constructor(talla, color, frase, precio) {
         this.talla = talla;
         // this.precio = precio;
         this.color = color;
         // this.bordados = bordados;
         this.frase = frase;
+        this.precio = precio;
     }
 }
 // Clase Pedido
@@ -149,8 +151,8 @@ function nombrePedido(nompedido) {
     return nompedido;
 }
 // Crear objeto Chamarra
-function crearChamarra (talla, precio, color, bordados, frase) {
-    const chamarra = new Chamarra(talla, precio, color, bordados, frase);
+function crearChamarra (talla, color, frase, precio) {
+    const chamarra = new Chamarra(talla, color, frase, precio);
     return chamarra;
 }
 //Crear objeto Pedido
@@ -174,20 +176,21 @@ function crearPedido (chamarra, nombrede) {
 
 
 
-// Descomentar al final
-let realizarPedido = document.getElementById('PedirChamarra');
-realizarPedido.onclick = function() {PedirChamarra()};
-function PedirChamarra() {
-    let chamarra = crearChamarra(talla_pedido, color_pedido, frase_pedido);
+
+let realizarPedido = document.getElementById('AddToCart');
+realizarPedido.onclick = function() {AddToCart()};
+function AddToCart() {
+    let precio = 200;
+    let chamarra = crearChamarra(talla_pedido, color_pedido, frase_pedido, precio);
     let pedido = crearPedido(chamarra);
     pedidos[conteo_pedidos] = pedido;
-    alert("Te muestro tu pedido: chamarra de talla " + pedidos[conteo_pedidos].chamarra.talla + " de color " + pedidos[conteo_pedidos].chamarra.color + " con la frase " + pedidos[conteo_pedidos].chamarra.frase + ". Tu total es de: $200 MXN");
+    cart.push(chamarra);
+    alert("Te muestro tu pedido: chamarra de talla " + pedidos[conteo_pedidos].chamarra.talla + " de color " + pedidos[conteo_pedidos].chamarra.color + " con la frase " + pedidos[conteo_pedidos].chamarra.frase + ". Tu total es de: $" + pedidos[conteo_pedidos].chamarra.precio + " MXN");
+    localStorage.setItem('cart', JSON.stringify(cart));
+    localStorage.setItem('flagCart', 'true');
 }
+
 // alert("Te muestro tu pedido: chamarra de talla " + pedidos[conteo_pedidos].chamarra.talla + " de color " + pedidos[conteo_pedidos].chamarra.color + " con " + pedidos[conteo_pedidos].chamarra.bordados + " bordado(s) a nombre de " + pedidos[conteo_pedidos].nombrede + ". Tu total es de: $" + pedidos[conteo_pedidos].chamarra.precio + "MXN");
 // alert("¡Gracias por tu pedido (:!");
 // console.log('Ultimo Pedido => número: ' + conteo_pedidos + ' a nombre de: ' + pedidos[conteo_pedidos].nombrede);
 // console.log(pedidos[conteo_pedidos].chamarra);
-
-
-
-
