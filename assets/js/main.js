@@ -32,31 +32,39 @@ class Pedido {
 }
 //  ------------   COLOR SECTION  ---------------
 //Botones para selecciona el color
-let colorSerenity = document.getElementById('colorSerenity');
-let colorSnorkelBlue = document.getElementById('colorSnorkelBlue');
-let colorGreenFlash = document.getElementById('colorGreenFlash');
-let colorLilacGray = document.getElementById('colorLilacGray');
-let colorPeachEcho = document.getElementById('colorPeachEcho');
-let colorRoseQuartz = document.getElementById('colorRoseQuartz');
-const coloresDisponibles = ['colorSerenity', 'colorSnorkelBlue', 'colorGreenFlash', 'colorLilacGray', 'colorPeachEcho', 'colorRoseQuartz'];
+let Serenity = document.getElementById('colorSerenity');
+let SnorkelBlue = document.getElementById('colorSnorkelBlue');
+let GreenFlash = document.getElementById('colorGreenFlash');
+let LilacGray = document.getElementById('colorLilacGray');
+let PeachEcho = document.getElementById('colorPeachEcho');
+let RoseQuartz = document.getElementById('colorRoseQuartz');
+const coloresDisponibles = ['Serenity', 'SnorkelBlue', 'GreenFlash', 'LilacGray', 'PeachEcho', 'RoseQuartz'];
 //Funciones de botones para seleccionar color
-colorSerenity.onclick = function() {seleccionarColor('colorSerenity')};
-colorSnorkelBlue.onclick =  function() {seleccionarColor('colorSnorkelBlue')};
-colorGreenFlash.onclick =  function() {seleccionarColor('colorGreenFlash')};
-colorLilacGray.onclick =  function() {seleccionarColor('colorLilacGray')};
-colorPeachEcho.onclick =  function() {seleccionarColor('colorPeachEcho')};
-colorRoseQuartz.onclick =  function() {seleccionarColor('colorRoseQuartz')};
+Serenity.onclick = function() {seleccionarColor('Serenity')};
+SnorkelBlue.onclick =  function() {seleccionarColor('SnorkelBlue')};
+GreenFlash.onclick =  function() {seleccionarColor('GreenFlash')};
+LilacGray.onclick =  function() {seleccionarColor('LilacGray')};
+PeachEcho.onclick =  function() {seleccionarColor('PeachEcho')};
+RoseQuartz.onclick =  function() {seleccionarColor('RoseQuartz')};
 // Escoger color de la chamarra
 function seleccionarColor(color) {
             color_pedido = color;
             coloresDisponibles.forEach(blockOtherColors);
+            swal({
+                title: "Color seleccionado:",
+                text: color,
+                button: false,
+                closeOnEsc: true,
+                closeOnClickOutside: true,
+                timer: 500
+            });
 }
 function blockOtherColors(thiscolor) {
     if (color_pedido != thiscolor) {
         // document.getElementById(thiscolor).classList.add('disabled');
-        document.getElementById(thiscolor).classList.remove('selected');
+        document.getElementById('color' + thiscolor).classList.remove('selected');
     } else {
-        document.getElementById(thiscolor).classList.add('selected');
+        document.getElementById('color' + thiscolor).classList.add('selected');
         // document.getElementById(thiscolor).classList.remove('disable');
         console.log('El color seleccionado fue: ', thiscolor);
     }
@@ -75,6 +83,14 @@ tallaGrande.onclick =  function() {seleccionarTalla('grande')};
 function seleccionarTalla(size) {
     talla_pedido = size;
     tallasDisponibles.forEach(blockOtherSizes);
+    swal({
+        title: "Talla seleccionada:",
+        text: size,
+        button: false,
+        closeOnEsc: true,
+        closeOnClickOutside: true,
+        timer: 500
+    });
 }
 function blockOtherSizes(thisSize) {
     if (talla_pedido != thisSize) {
@@ -100,6 +116,14 @@ yoSoy.onclick = function() {seleccionarFrase('Yo_Soy')};
 function seleccionarFrase(phrase) {
     frase_pedido = phrase;
     frasesDisponibles.forEach(blockOtherPhrases);
+    swal({
+        title: "Frase seleccionada:",
+        text: phrase,
+        button: false,
+        closeOnEsc: true,
+        closeOnClickOutside: true,
+        timer: 750
+    });
 }
 function blockOtherPhrases(thisPhrase) {
     if (frase_pedido != thisPhrase) {
@@ -139,17 +163,17 @@ function buscarPorFiltro(pedidos,filtros) {
 // }
 
 //Crear nombre del pedido
-function nombrePedido(nompedido) {
-    while (nompedido==undefined) {
-        nompedido = prompt('¿A nombre de quién quedará el pedido?'); 
-        if (nompedido==undefined) {
-            alert('Debes ingresar un nombre para continuar (:')
-        } else {
-            return nompedido;
-        }
-    }
-    return nompedido;
-}
+// function nombrePedido(nompedido) {
+//     while (nompedido==undefined) {
+//         nompedido = prompt('¿A nombre de quién quedará el pedido?'); 
+//         if (nompedido==undefined) {
+//             alert('Debes ingresar un nombre para continuar (:')
+//         } else {
+//             return nompedido;
+//         }
+//     }
+//     return nompedido;
+// }
 // Crear objeto Chamarra
 function crearChamarra (talla, color, frase, precio) {
     const chamarra = new Chamarra(talla, color, frase, precio);
@@ -182,12 +206,48 @@ realizarPedido.onclick = function() {AddToCart()};
 function AddToCart() {
     let precio = 200;
     let chamarra = crearChamarra(talla_pedido, color_pedido, frase_pedido, precio);
-    let pedido = crearPedido(chamarra);
-    pedidos[conteo_pedidos] = pedido;
     cart.push(chamarra);
-    alert("Te muestro tu pedido: chamarra de talla " + pedidos[conteo_pedidos].chamarra.talla + " de color " + pedidos[conteo_pedidos].chamarra.color + " con la frase " + pedidos[conteo_pedidos].chamarra.frase + ". Tu total es de: $" + pedidos[conteo_pedidos].chamarra.precio + " MXN");
+    swal({
+        title: "Pedido a nombre de: ",
+        content: {
+            element: "input"
+            // attributes: {
+            //     placeholder: "Type your name, please :3"
+            // },
+        },    
+    })
+    .then((value) => {
+        console.log(value);
+        nompedido = value;
+        let pedido = crearPedido(chamarra, nompedido);
+        pedidos[conteo_pedidos] = pedido;
+        pedido_mensaje = "Chamarra de talla " + pedidos[conteo_pedidos].chamarra.talla + ", color " + pedidos[conteo_pedidos].chamarra.color + ", con la frase " + pedidos[conteo_pedidos].chamarra.frase + ", a nombre de: " + pedidos[conteo_pedidos].nombrede +". Tu total es de: $" + pedidos[conteo_pedidos].chamarra.precio + " MXN";
+        swal({
+            title: "Este es tu pedido: ",
+            text: pedido_mensaje,
+            button: "Yas, gracias!",
+            closeOnEsc: true,
+            closeOnClickOutside: true
+        });
+    });
+    // let pedido = crearPedido(chamarra, nompedido);
+    // pedidos[conteo_pedidos] = pedido;
+    // pedido_mensaje = "Chamarra de talla " + pedidos[conteo_pedidos].chamarra.talla + ", color " + pedidos[conteo_pedidos].chamarra.color + ", con la frase " + pedidos[conteo_pedidos].chamarra.frase + ", a nombre de: " + pedidos[conteo_pedidos].nombrede +". Tu total es de: $" + pedidos[conteo_pedidos].chamarra.precio + " MXN";
+    // mostrarMensaje();
     localStorage.setItem('cart', JSON.stringify(cart));
     localStorage.setItem('flagCart', 'true');
+}
+function mostrarMensaje () {
+    swal({
+        title: "Este es tu pedido: ",
+        text: pedido_mensaje,
+        button: "Yas, gracias!",
+        closeOnEsc: true,
+        closeOnClickOutside: true
+    })
+    .then((value) => {
+        swal('Ve a la sección de carrito para finalizar tu compra (:');
+    });
 }
 
 // alert("Te muestro tu pedido: chamarra de talla " + pedidos[conteo_pedidos].chamarra.talla + " de color " + pedidos[conteo_pedidos].chamarra.color + " con " + pedidos[conteo_pedidos].chamarra.bordados + " bordado(s) a nombre de " + pedidos[conteo_pedidos].nombrede + ". Tu total es de: $" + pedidos[conteo_pedidos].chamarra.precio + "MXN");
