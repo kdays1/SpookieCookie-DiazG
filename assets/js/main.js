@@ -86,14 +86,13 @@ let tallaGrande = document.getElementById('grande');
 var tallasDisponibles;
 function checkforSizes(color_pedido) {
     tallasDisponibles = inventario[color_pedido];
-    tallasDisponibles.forEach(checkSizeAvailability);
-};
-function checkSizeAvailability(isthisSize){
-    if (isthisSize < 0) {
-        document.getElementById(isthisSize).classList.add('unavailable');
-    } else {
-        document.getElementById(isthisSize).classList.remove('unavailable');
-    }
+    for (i=0;i<3;i++) {
+        if (tallasDisponibles[i] < 0) {
+            document.getElementById(tallasDisponibles[i]).classList.add('unavailable');
+        } else {
+            document.getElementById(tallasDisponibles[i]).classList.remove('unavailable');
+        }
+    };
 }
 // Funciones de botones para seleccionar la talla
 tallaChica.onclick = function() {seleccionarTalla('chica')};
