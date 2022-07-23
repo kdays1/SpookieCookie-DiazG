@@ -86,11 +86,12 @@ let tallaGrande = document.getElementById('grande');
 var tallasDisponibles;
 function checkforSizes(color_pedido) {
     tallasDisponibles = inventario[color_pedido];
+    let tallasArray = Object.keys(tallasDisponibles);
     for (i=0;i<3;i++) {
         if (tallasDisponibles[i] < 0) {
-            document.getElementById(tallasDisponibles[i]).classList.add('unavailable');
+            document.getElementById(tallasArray[i]).classList.add('unavailable');
         } else {
-            document.getElementById(tallasDisponibles[i]).classList.remove('unavailable');
+            document.getElementById(tallasArray[i]).classList.remove('unavailable');
         }
     };
 }
@@ -101,7 +102,7 @@ tallaGrande.onclick =  function() {seleccionarTalla('grande')};
 //Escoger talla de la chamarra
 function seleccionarTalla(size) {
     talla_pedido = size;
-    tallasDisponibles.forEach(blockOtherSizes);
+    tallasArray.forEach(blockOtherSizes);
     swal({
         title: "Talla seleccionada:",
         text: size,
