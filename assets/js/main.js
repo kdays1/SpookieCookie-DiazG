@@ -30,6 +30,13 @@ class Pedido {
         this.nombrede = nombrede;
     }
 }
+// -------------  GET INFO  -------------
+fetch("./fakeDB.json")
+    .then(response => response.json())
+    .then(function(data) {
+    console.log(data);
+    let inventario = data;
+});
 //  ------------   COLOR SECTION  ---------------
 //Botones para selecciona el color
 let Serenity = document.getElementById('colorSerenity');
