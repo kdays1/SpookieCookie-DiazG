@@ -113,6 +113,8 @@ function seleccionarTalla(size) {
         });
     } else {
         talla_pedido = size;
+        tallasDisponibles = inventario[color_pedido];
+        let tallasArray = Object.keys(tallasDisponibles);
         tallasArray.forEach(blockOtherSizes);
         swal({
             title: "Talla seleccionada:",
