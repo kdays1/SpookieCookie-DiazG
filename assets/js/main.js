@@ -11,6 +11,7 @@ let pedidos = {};
 let bordado_frase = 'sin frase';
 let nompedido = undefined;
 const cart = [];
+let inventario;
 
 // Clase chamarra
 class Chamarra {
@@ -35,7 +36,7 @@ fetch("./fakeDB.json")
     .then(response => response.json())
     .then(function(data) {
     console.log(data);
-    let inventario = data;
+    inventario = data;
 });
 //  ------------   COLOR SECTION  ---------------
 //Botones para selecciona el color
