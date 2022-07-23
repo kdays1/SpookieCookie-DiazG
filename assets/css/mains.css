@@ -367,8 +367,7 @@ button:active {
   border: none; }
 
 .unavailable {
-  cursor: not-allowed;
-  pointer-events: none; }
+  cursor: none; }
 
 .how2buy__step {
   margin: 2px; }

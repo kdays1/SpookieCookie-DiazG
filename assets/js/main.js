@@ -84,6 +84,7 @@ let tallaChica = document.getElementById('chica');
 let tallaMediana = document.getElementById('mediana');
 let tallaGrande = document.getElementById('grande');
 var tallasDisponibles;
+let desanohay;
 function checkforSizes(color_pedido) {
     tallasDisponibles = inventario[color_pedido];
     let tallasArray = Object.keys(tallasDisponibles);
@@ -92,6 +93,7 @@ function checkforSizes(color_pedido) {
             document.getElementById(tallasArray[i]).classList.add('unavailable');
         } else {
             document.getElementById(tallasArray[i]).classList.remove('unavailable');
+            desanohay = tallasArray[i];
         }
     };
 }
@@ -101,16 +103,26 @@ tallaMediana.onclick =  function() {seleccionarTalla('mediana')};
 tallaGrande.onclick =  function() {seleccionarTalla('grande')};
 //Escoger talla de la chamarra
 function seleccionarTalla(size) {
-    talla_pedido = size;
-    tallasArray.forEach(blockOtherSizes);
-    swal({
-        title: "Talla seleccionada:",
-        text: size,
-        button: false,
-        closeOnEsc: true,
-        closeOnClickOutside: true,
-        timer: 500
-    });
+    if(size == desanohay) {
+        swal({
+            title: "Talla no disponible, sorry ):",
+            button: false,
+            closeOnEsc: true,
+            closeOnClickOutside: true,
+            timer: 500
+        });
+    } else {
+        talla_pedido = size;
+        tallasArray.forEach(blockOtherSizes);
+        swal({
+            title: "Talla seleccionada:",
+            text: size,
+            button: false,
+            closeOnEsc: true,
+            closeOnClickOutside: true,
+            timer: 500
+        });
+    }
 }
 function blockOtherSizes(thisSize) {
     if (talla_pedido != thisSize) {
