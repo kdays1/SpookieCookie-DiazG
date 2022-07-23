@@ -366,6 +366,10 @@ header {
 button:active {
   border: none; }
 
+.unavailable {
+  cursor: not-allowed;
+  pointer-events: none; }
+
 .how2buy__step {
   margin: 2px; }
   .how2buy__step > img {

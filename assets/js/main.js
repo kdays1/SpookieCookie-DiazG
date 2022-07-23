@@ -66,6 +66,7 @@ function seleccionarColor(color) {
                 closeOnClickOutside: true,
                 timer: 500
             });
+            checkforSizes(color_pedido);
 }
 function blockOtherColors(thiscolor) {
     if (color_pedido != thiscolor) {
@@ -78,11 +79,22 @@ function blockOtherColors(thiscolor) {
     }
 }
 // -------------  SIZE SECTION ----------------
-// Botones para seleccionar color
+// Botones para seleccionar talla
 let tallaChica = document.getElementById('chica');
 let tallaMediana = document.getElementById('mediana');
 let tallaGrande = document.getElementById('grande');
-const tallasDisponibles = ['chica', 'mediana', 'grande'];
+const tallasDisponibles = {};
+function checkforSizes(color_pedido) {
+    tallasDisponibles = inventario[color_pedido];
+    tallasDisponibles.forEach(checkSizeAvailability);
+};
+function checkSizeAvailability(isthisSize){
+    if (isthisSize < 0) {
+        document.getElementById(isthisSize).classList.add('unavailable');
+    } else {
+        document.getElementById(isthisSize).classList.remove('unavailable');
+    }
+}
 // Funciones de botones para seleccionar la talla
 tallaChica.onclick = function() {seleccionarTalla('chica')};
 tallaMediana.onclick =  function() {seleccionarTalla('mediana')};
