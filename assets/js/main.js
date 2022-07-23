@@ -83,7 +83,7 @@ function blockOtherColors(thiscolor) {
 let tallaChica = document.getElementById('chica');
 let tallaMediana = document.getElementById('mediana');
 let tallaGrande = document.getElementById('grande');
-const tallasDisponibles = {};
+var tallasDisponibles;
 function checkforSizes(color_pedido) {
     tallasDisponibles = inventario[color_pedido]();
     tallasDisponibles.forEach(checkSizeAvailability);
