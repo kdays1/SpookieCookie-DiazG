@@ -91,9 +91,9 @@ function checkforSizes(color_pedido) {
     for (i=0;i<3;i++) {
         if (tallasDisponibles[tallasArray[i]] == 0) {
             document.getElementById(tallasArray[i]).classList.add('unavailable');
+            desanohay = tallasArray[i];
         } else {
             document.getElementById(tallasArray[i]).classList.remove('unavailable');
-            desanohay = tallasArray[i];
         }
     };
 }
