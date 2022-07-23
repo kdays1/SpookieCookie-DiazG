@@ -89,7 +89,7 @@ function checkforSizes(color_pedido) {
     let tallasArray = Object.keys(tallasDisponibles);
     let tallasArrayAvailable = {};
     for (i=0;i<3;i++) {
-        if (tallasDisponibles[i] < 0) {
+        if (tallasDisponibles[i] == 0) {
             document.getElementById(tallasArray[i]).classList.add('unavailable');
             tallasArrayAvailable.push(tallasArray[i]);
         } else {
