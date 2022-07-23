@@ -85,7 +85,7 @@ let tallaMediana = document.getElementById('mediana');
 let tallaGrande = document.getElementById('grande');
 var tallasDisponibles;
 function checkforSizes(color_pedido) {
-    tallasDisponibles = inventario[color_pedido]();
+    tallasDisponibles = inventario[color_pedido];
     tallasDisponibles.forEach(checkSizeAvailability);
 };
 function checkSizeAvailability(isthisSize){
