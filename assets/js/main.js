@@ -87,9 +87,11 @@ var tallasDisponibles;
 function checkforSizes(color_pedido) {
     tallasDisponibles = inventario[color_pedido];
     let tallasArray = Object.keys(tallasDisponibles);
+    let tallasArrayAvailable = {};
     for (i=0;i<3;i++) {
         if (tallasDisponibles[i] < 0) {
             document.getElementById(tallasArray[i]).classList.add('unavailable');
+            tallasArrayAvailable.push(tallasArray[i]);
         } else {
             document.getElementById(tallasArray[i]).classList.remove('unavailable');
         }
