@@ -276,7 +276,10 @@ function mostrarMensaje () {
     swal({
         title: "Este es tu pedido: ",
         text: pedido_mensaje,
-        button: "Yas, gracias!",
+        buttons: {
+            close: "Seguir comprando",
+            go : '<a href="./cart.html">Ir al carrito</a>'
+        },
         closeOnEsc: true,
         closeOnClickOutside: true
     })
