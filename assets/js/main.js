@@ -262,7 +262,7 @@ function AddToCart() {
             text: pedido_mensaje,
             buttons: {
                 close: "Seguir comprando",
-                go : '<a href="./cart.html">Ir al carrito</a>'
+                go : <a href="./cart.html">Ir al carrito</a>
             },
             closeOnEsc: true,
             closeOnClickOutside: true
