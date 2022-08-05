@@ -261,12 +261,14 @@ function AddToCart() {
             title: "Este es tu pedido: ",
             text: pedido_mensaje,
             buttons: {
-                close: "Seguir comprando",
+                ok: "Ir al carrito",
             },
             closeOnEsc: true,
             closeOnClickOutside: true,
-            footer: '<a href="./cart.html">Ir al carrito</a>'
-        });
+        }, function () {
+            window.location.href = '/cart.html'
+        }
+        );
     });
     // let pedido = crearPedido(chamarra, nompedido);
     // pedidos[conteo_pedidos] = pedido;
