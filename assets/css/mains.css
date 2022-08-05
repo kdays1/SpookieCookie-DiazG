@@ -369,6 +369,9 @@ button:active {
 .unavailable {
   cursor: none; }
 
+.styleButtonCart {
+  color: rgba(0, 0, 0, 0.5); }
+
 .donotshow {
   display: none; }
 
