@@ -246,9 +246,6 @@ function AddToCart() {
         title: "Pedido a nombre de: ",
         content: {
             element: "input"
-            // attributes: {
-            //     placeholder: "Type your name, please :3"
-            // },
         },    
     })
     .then((value) => {
@@ -257,17 +254,18 @@ function AddToCart() {
         let pedido = crearPedido(chamarra, nompedido);
         pedidos[conteo_pedidos] = pedido;
         pedido_mensaje = "Chamarra de talla " + pedidos[conteo_pedidos].chamarra.talla + ", color " + pedidos[conteo_pedidos].chamarra.color + ", con la frase " + pedidos[conteo_pedidos].chamarra.frase + ", a nombre de: " + pedidos[conteo_pedidos].nombrede +". Tu total es de: $" + pedidos[conteo_pedidos].chamarra.precio + " MXN";
+        linkToCart = document.getElementById('GoToCart');
+        linkToCart.classList.remove("donotshow");
         swal({
             title: "Este es tu pedido: ",
             text: pedido_mensaje,
             buttons: {
-                ok: "Ir al carrito",
+                ok: "Cerrar",
             },
             closeOnEsc: true,
             closeOnClickOutside: true,
-        }, function () {
-            window.location.href = '/cart.html'
         }
+            // window.location.href = '/cart.html'
         );
     });
     // let pedido = crearPedido(chamarra, nompedido);

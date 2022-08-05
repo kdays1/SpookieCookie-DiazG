@@ -369,6 +369,9 @@ button:active {
 .unavailable {
   cursor: none; }
 
+.donotshow {
+  display: none; }
+
 .how2buy__step {
   margin: 2px; }
   .how2buy__step > img {
