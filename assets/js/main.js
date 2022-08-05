@@ -262,10 +262,10 @@ function AddToCart() {
             text: pedido_mensaje,
             buttons: {
                 close: "Seguir comprando",
-                go : <a href="./cart.html">Ir al carrito</a>
             },
             closeOnEsc: true,
-            closeOnClickOutside: true
+            closeOnClickOutside: true,
+            footer: '<a href="./cart.html">Ir al carrito</a>'
         });
     });
     // let pedido = crearPedido(chamarra, nompedido);
@@ -281,10 +281,10 @@ function mostrarMensaje () {
         text: pedido_mensaje,
         buttons: {
             close: "Seguir comprando",
-            go : '<a href="./cart.html">Ir al carrito</a>'
         },
         closeOnEsc: true,
-        closeOnClickOutside: true
+        closeOnClickOutside: true,
+        footer: Hola
     })
     .then((value) => {
         swal('Ve a la sección de carrito para finalizar tu compra (:');
