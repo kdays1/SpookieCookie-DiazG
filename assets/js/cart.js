@@ -5,6 +5,8 @@ var contenedor, dentroContenedor, contenido;
 
 function checkCartStorage () {
     if (localStorage.flagCart == 'true') {
+        var notBuy = document.getElementById('notBuy');
+        notBuy.classList.add('donotshow');
         let intheCart = JSON.parse(localStorage.cart);
         for (i=0; i<intheCart.length; i++) {
             order = 'Chamarra tamaño: ' + intheCart[i].talla + ' color: ' + intheCart[i].color + ' con la frase: ' + intheCart[i].frase + '. Tu total es de $' + intheCart[i].precio;
@@ -13,8 +15,8 @@ function checkCartStorage () {
             contenedor.appendChild(dentroContenedor);
             contenido = document.createTextNode(order);
             dentroContenedor.appendChild(contenido);
+            console.log(order);
         }
-        console.log(order);
         // document.getElementById("thisCart").innerHTML = order;
     }
 }
