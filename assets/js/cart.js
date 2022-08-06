@@ -4,7 +4,7 @@ const order = [];
 function checkCartStorage () {
     if (localStorage.flagCart == 'true') {
         let intheCart = JSON.parse(localStorage.cart);
-        for (i=0; i<cart.length; i++) {
+        for (i=0; i<intheCart.length; i++) {
             order = 'Chamarra tamaño: ' + intheCart[i].talla + ' color: ' + intheCart[i].color + ' con la frase: ' + intheCart[i].frase + '. Tu total es de $' + intheCart[i].precio;
             document.getElementById("thisCart").innerHTML = "<div id='object" + i + "'></div>"
             document.getElementById("<div id='object"+ i + "'></div>").innerHTML = order;
