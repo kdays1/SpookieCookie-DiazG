@@ -21,7 +21,7 @@ function checkCartStorage () {
             dentroContenedor.appendChild(division);
             console.log(order);
             suma[i] = parseInt(intheCart[i].precio, 10);
-            total = total + suma;
+            total = total + suma[i];
         }
         // document.getElementById("thisCart").innerHTML = order;
         totalElement = document.createElement.apply("div");
