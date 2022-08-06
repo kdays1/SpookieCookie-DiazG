@@ -2,6 +2,8 @@ const cart = [];
 var order = [];
 var elementHijo = [];
 var contenedor, dentroContenedor, contenido;
+var total = 0;
+var suma = [];
 
 function checkCartStorage () {
     if (localStorage.flagCart == 'true') {
@@ -15,9 +17,17 @@ function checkCartStorage () {
             contenedor.appendChild(dentroContenedor);
             contenido = document.createTextNode(order);
             dentroContenedor.appendChild(contenido);
+            division = document.createElement("hr");
+            dentroContenedor.appendChild(division);
             console.log(order);
+            suma[i] = parseInt(intheCart[i].precio, 10);
+            total = total + suma;
         }
         // document.getElementById("thisCart").innerHTML = order;
+        totalElement = document.createElement.apply("div");
+        totalContenido = document.createTextNode('Tu total es de: '+ total);
+        totalElement.appendChild(totalContenido);
+        contenedor.appendChild(totalElement);
     }
 }
 checkCartStorage ();
