@@ -1,5 +1,5 @@
 const cart = [];
-const order = [];
+var order = [];
 
 function checkCartStorage () {
     if (localStorage.flagCart == 'true') {
