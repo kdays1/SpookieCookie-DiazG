@@ -1,11 +1,16 @@
 const cart = [];
+const order = [];
 
 function checkCartStorage () {
     if (localStorage.flagCart == 'true') {
         let intheCart = JSON.parse(localStorage.cart);
-        let order = 'Chamarra \n tamaño: ' + intheCart[0].talla + '\n color: ' + intheCart[0].color + '\n con la frase: ' + intheCart[0].frase + '. Tu total es de $' + intheCart[0].precio;
+        for (i=0; i<cart.length; i++) {
+            order = 'Chamarra tamaño: ' + intheCart[i].talla + ' color: ' + intheCart[i].color + ' con la frase: ' + intheCart[i].frase + '. Tu total es de $' + intheCart[i].precio;
+            document.getElementById("thisCart").innerHTML = "<div id='object" + i + "'></div>"
+            document.getElementById("<div id='object"+ i + "'></div>").innerHTML = order;
+        }
         console.log(order);
-        document.getElementById("thisCart").innerHTML = order;
+        // document.getElementById("thisCart").innerHTML = order;
     }
 }
 checkCartStorage ();
