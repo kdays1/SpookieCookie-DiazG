@@ -11,7 +11,8 @@ function checkCartStorage () {
             contenedor = document.getElementById("thisCart");
             dentroContenedor = document.createElement("div");
             contenedor.appendChild(dentroContenedor);
-            dentroContenedor.appendChild(order);
+            contenido = document.createTextNode(order);
+            dentroContenedor.appendChild(contenido);
         }
         console.log(order);
         // document.getElementById("thisCart").innerHTML = order;
