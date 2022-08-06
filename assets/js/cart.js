@@ -24,7 +24,7 @@ function checkCartStorage () {
             total = total + suma[i];
         }
         // document.getElementById("thisCart").innerHTML = order;
-        totalElement = document.createElement.apply("div");
+        totalElement = document.createElement("div");
         totalContenido = document.createTextNode('Tu total es de: '+ total);
         totalElement.appendChild(totalContenido);
         contenedor.appendChild(totalElement);
