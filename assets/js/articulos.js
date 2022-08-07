@@ -3,10 +3,10 @@ function checkTheStorage () {
         linkToCart = document.getElementById('theCart');
         let intheCart = JSON.parse(localStorage.cart);
         let howMany = intheCart.length;
-        linkToCart.innerHTML.replace = "Carrito (" + howMany + ")";
+        linkToCart.innerHTML = "Carrito (" + howMany + ")";
     } else {
         linkToCart = document.getElementById(theCart);
-        linkToCart.innerHTML.replace = "Carrito";
+        linkToCart.innerHTML = "Carrito";
     }
 }
 
