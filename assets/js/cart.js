@@ -25,7 +25,7 @@ function checkCartStorage () {
         }
         // document.getElementById("thisCart").innerHTML = order;
         totalElement = document.createElement("div");
-        totalContenido = document.createTextNode('Tu total es de: '+ total);
+        totalContenido = document.createTextNode('Tu total es de: $'+ total);
         totalElement.appendChild(totalContenido);
         contenedor.appendChild(totalElement);
     }
