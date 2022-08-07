@@ -1,6 +1,6 @@
 function checkTheStorage () {
     if (localStorage.flagCart == 'true') {
-        linkToCart = document.getElementById(theCart);
+        linkToCart = document.getElementById('theCart');
         let intheCart = JSON.parse(localStorage.cart);
         let howMany = intheCart.length;
         linkToCart.innerHTML.replace = "Carrito (" + howMany + ")";
