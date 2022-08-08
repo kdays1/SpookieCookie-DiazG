@@ -10,7 +10,7 @@ let conteo_pedidos = 0;
 let pedidos = {};
 let bordado_frase = 'sin frase';
 let nompedido = undefined;
-const cart = [];
+var cart = [];
 let inventario;
 
 // Clase chamarra
