@@ -5,7 +5,7 @@ var contenedor, dentroContenedor, contenido;
 var total = 0;
 var suma = [];
 
-function deleteItem (theNumber) {
+function deleteAnItem (theNumber) {
     let toDelete = document.getElementById("div"+theNumber);
     toDelete.remove();
 }
@@ -36,7 +36,7 @@ function checkCartStorage () {
             deleteItem = document.createElement("button");
             deleteItem.setAttribute("id","btn" + i);
             contenedor.appendChild(deleteItem);
-            deleteItem.addEventListener("click",deleteItem(i))
+            deleteItem.addEventListener("click",deleteAnItem(i))
         }
         // document.getElementById("thisCart").innerHTML = order;
         totalElement = document.createElement("div");
