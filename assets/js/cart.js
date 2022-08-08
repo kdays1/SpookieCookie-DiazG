@@ -17,25 +17,31 @@ function checkCartStorage () {
         let intheCart = JSON.parse(localStorage.cart);
         for (i=0; i<intheCart.length; i++) {
             order = 'Chamarra tamaño: ' + intheCart[i].talla + ' color: ' + intheCart[i].color + ' con la frase: ' + intheCart[i].frase + '. Tu total es de $' + intheCart[i].precio;
+            // full container
             contenedor = document.getElementById("thisCart");
             numeracion = document.createElement("span");
+            // span for number of item
             num = document.createTextNode(i+") ");
             numeracion.appendChild(num);
             contenedor.appendChild(numeracion);
+            // item container
             dentroContenedor = document.createElement("div");
             dentroContenedor.setAttribute("id","div"+i);
             contenedor.appendChild(dentroContenedor);
+            // item in cart
             contenido = document.createTextNode(order);
             dentroContenedor.appendChild(contenido);
-            division = document.createElement("hr");
-            dentroContenedor.appendChild(division);
             console.log(order);
             suma[i] = parseInt(intheCart[i].precio, 10);
             total = total + suma[i];
+            // delete button for item
             deleteItem = document.createElement("button");
             deleteItem.setAttribute("id","btn" + i);
-            contenedor.appendChild(deleteItem);
             deleteItem.setAttribute("onclick", "deleteAnItem("+i+")");
+            dentroContenedor.appendChild(deleteItem);
+            // division for next item or total
+            division = document.createElement("hr");
+            dentroContenedor.appendChild(division);
         }
         // document.getElementById("thisCart").innerHTML = order;
         totalElement = document.createElement("div");
