@@ -22,6 +22,7 @@ function updateLocalS() {
 function deleteAnItem (theNumber) {
     let toDelete = document.getElementById("div"+theNumber);
     toDelete.remove();
+    intheCart = JSON.parse(localStorage.cart);
     inTheCart.splice(theNumber, 1);
     // delete intheCart[theNumber];
     updateLocalS();
