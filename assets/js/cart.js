@@ -15,7 +15,7 @@ function updateLocalS() {
         newTotal = newTotal + newSuma[i];
         nuevototalContenido = 'Tu total es de: $'+ total;
         elementoTotal = document.getElementById("elTotalSumado");
-        elementoTotal.innerHTML(nuevototalContenido);
+        elementoTotal.innerHTML = nuevototalContenido;
     }
 }
 
