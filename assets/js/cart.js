@@ -6,7 +6,7 @@ var total = 0;
 var newTotal = 0; 
 var suma = [];
 var newSuma = [];
-var intheCart;
+var intheCart, notBuy;
 
 function checkTheStorage () {
     if (localStorage.flagCart == 'true') {
@@ -24,6 +24,11 @@ checkTheStorage();
 
 function updateLocalS() {
     localStorage.setItem('cart', JSON.stringify(intheCart));
+    if (intheCart.length == 0) {
+        localStorage.setItem('flagCart', 'false');
+        notBuy.classList.remove('donotshow');
+        document.getElementById('elTotalSumado').classList.add('donotshow');
+    }
     for (var i=0; i<intheCart.length; i++) {
         newSuma[i] = parseInt(intheCart[i].precio, 10);
         newTotal = newTotal + newSuma[i];
@@ -45,7 +50,7 @@ function deleteAnItem (theNumber) {
 
 function checkCartStorage () {
     if (localStorage.flagCart == 'true') {
-        var notBuy = document.getElementById('notBuy');
+        notBuy = document.getElementById('notBuy');
         notBuy.classList.add('donotshow');
         intheCart = JSON.parse(localStorage.cart);
         for (i=0; i<intheCart.length; i++) {
