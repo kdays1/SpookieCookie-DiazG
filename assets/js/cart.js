@@ -5,6 +5,11 @@ var contenedor, dentroContenedor, contenido;
 var total = 0;
 var suma = [];
 
+function deleteItem (theNumber) {
+    let toDelete = document.getElementById("div"+theNumber);
+    toDelete.remove();
+}
+
 function checkCartStorage () {
     if (localStorage.flagCart == 'true') {
         var notBuy = document.getElementById('notBuy');
@@ -19,6 +24,7 @@ function checkCartStorage () {
             numeracion.appendChild(num);
             contenedor.appendChild(numeracion);
             dentroContenedor = document.createElement("div");
+            dentroContenedor.setAttribute("id","div"+i);
             contenedor.appendChild(dentroContenedor);
             contenido = document.createTextNode(order);
             dentroContenedor.appendChild(contenido);
@@ -30,7 +36,7 @@ function checkCartStorage () {
             deleteItem = document.createElement("button");
             deleteItem.setAttribute("id","btn" + i);
             contenedor.appendChild(deleteItem);
-            deleteItem.addEventListener("click",deleteItem())
+            deleteItem.addEventListener("click",deleteItem(i))
         }
         // document.getElementById("thisCart").innerHTML = order;
         totalElement = document.createElement("div");
@@ -41,9 +47,7 @@ function checkCartStorage () {
 }
 checkCartStorage ();
 
-function deleteItem () {
 
-}
 // alert("Te muestro tu pedido: chamarra de talla " + pedidos[conteo_pedidos].chamarra.talla + " de color " + pedidos[conteo_pedidos].chamarra.color + " con " + pedidos[conteo_pedidos].chamarra.bordados + " bordado(s) a nombre de " + pedidos[conteo_pedidos].nombrede + ". Tu total es de: $" + pedidos[conteo_pedidos].chamarra.precio + "MXN");
 // alert("¡Gracias por tu pedido (:!");
 // console.log('Ultimo Pedido => número: ' + conteo_pedidos + ' a nombre de: ' + pedidos[conteo_pedidos].nombrede);
