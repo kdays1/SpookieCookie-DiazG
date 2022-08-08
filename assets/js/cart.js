@@ -35,7 +35,7 @@ function checkCartStorage () {
             deleteItem = document.createElement("button");
             deleteItem.setAttribute("id","btn" + i);
             contenedor.appendChild(deleteItem);
-            deleteItem.addEventListener("click",deleteAnItem(i))
+            deleteItem.setAttribute("onclick", "deleteAnItem("+i+")");
         }
         // document.getElementById("thisCart").innerHTML = order;
         totalElement = document.createElement("div");
