@@ -38,7 +38,8 @@ function checkCartStorage () {
             deleteItem = document.createElement("button");
             deleteItem.setAttribute("id","btn" + i);
             deleteItem.setAttribute("onclick", "deleteAnItem("+i+")");
-            deleteItem.classList.add("btn-primary")
+            deleteItem.classList.add("btn-primary");
+            deleteItem.innerHTML = "Borrar";
             dentroContenedor.appendChild(deleteItem);
             // division for next item or total
             division = document.createElement("hr");
