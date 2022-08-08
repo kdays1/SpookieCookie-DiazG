@@ -3,17 +3,27 @@ var order = [];
 var elementHijo = [];
 var contenedor, dentroContenedor, contenido;
 var total = 0;
+var newTotal = 0; 
 var suma = [];
+var newSuma = [];
 var intheCart;
 
 function updateLocalS() {
     localStorage.setItem('cart', JSON.stringify(intheCart));
+    for (var i=0; i<intheCart.length; i++) {
+        newSuma[i] = parseInt(intheCart[i].precio, 10);
+        newTotal = newTotal + newSuma[i];
+        nuevototalContenido = 'Tu total es de: $'+ total;
+        elementoTotal = document.getElementById("elTotalSumado");
+        elementoTotal.innerHTML(nuevototalContenido);
+    }
 }
 
 function deleteAnItem (theNumber) {
     let toDelete = document.getElementById("div"+theNumber);
     toDelete.remove();
-    delete intheCart[theNumber];
+    inTheCart.splice(theNumber, 1);
+    // delete intheCart[theNumber];
     updateLocalS();
 }
 
@@ -50,6 +60,7 @@ function checkCartStorage () {
         }
         // document.getElementById("thisCart").innerHTML = order;
         totalElement = document.createElement("div");
+        totalElement.setAttribute("id", "elTotalSumado");
         totalContenido = document.createTextNode('Tu total es de: $'+ total);
         totalElement.appendChild(totalContenido);
         contenedor.appendChild(totalElement);
