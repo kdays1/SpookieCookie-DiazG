@@ -18,7 +18,6 @@ function checkCartStorage () {
         for (i=0; i<intheCart.length; i++) {
             order = 'Chamarra tamaño: ' + intheCart[i].talla + ' color: ' + intheCart[i].color + ' con la frase: ' + intheCart[i].frase + '. Tu total es de $' + intheCart[i].precio;
             contenedor = document.getElementById("thisCart");
-            contenedor.setAttribute("id","contenedor"+i);
             numeracion = document.createElement("span");
             num = document.createTextNode(i+") ");
             numeracion.appendChild(num);
