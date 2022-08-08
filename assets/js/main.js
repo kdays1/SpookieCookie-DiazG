@@ -20,6 +20,7 @@ function checkCart() {
         cart = intheCart;
     }
 }
+checkCart()
 
 // Clase chamarra
 class Chamarra {
