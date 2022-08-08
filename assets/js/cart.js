@@ -8,15 +8,30 @@ var suma = [];
 var newSuma = [];
 var intheCart;
 
+function checkTheStorage () {
+    if (localStorage.flagCart == 'true') {
+        linkToCart = document.getElementById('theCart');
+        let intheCart = JSON.parse(localStorage.cart);
+        let howMany = intheCart.length;
+        linkToCart.innerHTML = "Carrito (" + howMany + ")";
+    } else {
+        linkToCart = document.getElementById(theCart);
+        linkToCart.innerHTML = "Carrito";
+    }
+}
+
+checkTheStorage();
+
 function updateLocalS() {
     localStorage.setItem('cart', JSON.stringify(intheCart));
     for (var i=0; i<intheCart.length; i++) {
         newSuma[i] = parseInt(intheCart[i].precio, 10);
         newTotal = newTotal + newSuma[i];
-        nuevototalContenido = 'Tu total es de: $'+ total;
-        elementoTotal = document.getElementById("elTotalSumado");
-        elementoTotal.innerHTML = nuevototalContenido;
     }
+    checkTheStorage();
+    nuevototalContenido = 'Tu total es de: $'+ newTotal;
+    elementoTotal = document.getElementById("elTotalSumado");
+    elementoTotal.innerHTML = nuevototalContenido;
 }
 
 function deleteAnItem (theNumber) {
