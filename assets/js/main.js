@@ -13,6 +13,14 @@ let nompedido = undefined;
 var cart = [];
 let inventario;
 
+//Check for previous objects in cart
+function checkCart() {
+    if (localStorage.flagCart == 'true') {
+        let intheCart = JSON.parse(localStorage.cart);
+        cart = intheCart;
+    }
+}
+
 // Clase chamarra
 class Chamarra {
     constructor(talla, color, frase, precio) {
