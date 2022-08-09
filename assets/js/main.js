@@ -21,7 +21,7 @@ function checkTheStorage () {
         let howMany = intheCart.length;
         linkToCart.innerHTML = "Carrito (" + howMany + ")";
     } else {
-        linkToCart = document.getElementById(theCart);
+        linkToCart = document.getElementById('theCart');
         linkToCart.innerHTML = "Carrito";
     }
 }
