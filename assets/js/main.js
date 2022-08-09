@@ -13,6 +13,21 @@ let nompedido = undefined;
 var cart = [];
 let inventario;
 
+
+function checkTheStorage () {
+    if (localStorage.flagCart == 'true') {
+        linkToCart = document.getElementById('theCart');
+        let intheCart = JSON.parse(localStorage.cart);
+        let howMany = intheCart.length;
+        linkToCart.innerHTML = "Carrito (" + howMany + ")";
+    } else {
+        linkToCart = document.getElementById(theCart);
+        linkToCart.innerHTML = "Carrito";
+    }
+}
+
+checkTheStorage();
+
 //Check for previous objects in cart
 function checkCart() {
     if (localStorage.flagCart == 'true') {
@@ -284,6 +299,7 @@ function AddToCart() {
     // mostrarMensaje();
     localStorage.setItem('flagCart', 'true');
     localStorage.setItem('cart', JSON.stringify(cart));
+    checkTheStorage();
 }
 // function mostrarMensaje () {
 //     swal({
